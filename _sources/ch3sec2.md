@@ -110,7 +110,7 @@ Pour les signaux déterministe (ie. à énergie finie, à puissance finie et pé
 d'autocorrélation et la densité spectrale de la sortie du système en fonction des caractéristiques de l'entrée. Ainsi, les relations entre
 les fonctions d'autocorrélation et densités spectrales de $x(t)$ et de $y(t)$ appelées relations de Wiener-Lee sont données ci-après
 
--   **Densité spectrale de puissance :**
+-   **Densité spectrale de puissance/énergie :**
 
     $$s_y(f)=s_x(f) |H(f)|^2$$
 

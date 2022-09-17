@@ -6,3 +6,6 @@ Le cours s'articule autour des chapitres suivants :
 
 ```{tableofcontents}
 ```
+
+
+Le polycopié de cours est disponible ici {download}`Polycopié 1SN Tetement du SIgnal - Partie I <./downloads/PolyTS-2022.pdf>`
