@@ -12,3 +12,5 @@ Le polycopié de cours est disponible ici {download}`Polycopié 1SN Traitement d
 
 Les diapositives du cours sont disponibles ici {download}`Diapositives 1SN Traitement du Signal - Partie I <./downloads/slidesTS1SN_20222023.pdf>`
 
+Vous aurez prochainement à disposition un polycopié d'exercices et de problèmes résolus sur les deux parties du cours.
+

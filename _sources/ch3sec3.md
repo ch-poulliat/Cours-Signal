@@ -93,13 +93,13 @@ Les relations de Wiener-Lee sont valables pour des signaux aléatoires stationna
     
     $$\boxed{R_{yx}(\tau)=R_x(\tau) * h(\tau)}$$
 
-    ```{prf}
+    ```{prf:proof}
     
     Pour démontrer cette relation, il suffit d'exprimer le produit scalaire à l'aide de l'isométrie 
     
     $$\begin{split}
     R_{yx}(\tau)&= E[ y(t) x^*(t-\tau)] \\
-    &=  \l\langle y(t), x(t-\tau) \rangle_1  \\
+    &=  \langle y(t), x(t-\tau) \rangle_1  \\
     &=\langle \exp(j2 \pi ft)H(f), \exp(j2 \pi f(t - \tau) \rangle_2 \\
     &=\int_{\mathbb {R}} \exp(j2 \pi ft)H(f) \exp(-j2 \pi f(t - \tau) )s_x(f)df \\
     & =\int_{\mathbb {R}} H(f) \exp(j2 \pi f  \tau) s_x(f)df \\
@@ -114,13 +114,13 @@ Les relations de Wiener-Lee sont valables pour des signaux aléatoires stationna
 
     $$\boxed{R_y(\tau) = R_x(\tau) * h(\tau) * h^*(-\tau)}$$
 
-    ```{prf}
+    ```{prf:proof}
    
     On procède comme ci-dessus 
     
     $$\begin{split}
     R_{y}(\tau)&= E[ y(t) y^*(t-\tau)] \\
-    &=  \l\langle y(t), y(t-\tau) \rangle_1  \\
+    &=  \langle y(t), y(t-\tau) \rangle_1  \\
     &=\langle \exp(j2 \pi ft)H(f), \exp(j2 \pi f(t - \tau)H(f) \rangle_2 \\
     &=\int_{\mathbb {R}} \exp(j2 \pi ft)H(f) \exp(-j2 \pi f(t - \tau)) H^*(f)s_x(f)df \\
     & =\int_{\mathbb {R}} H(f)H^*(f) \exp(j2 \pi f  \tau) s_x(f)df \\
@@ -134,8 +134,10 @@ Les relations de Wiener-Lee sont valables pour des signaux aléatoires stationna
 
     $$\boxed{s_y(f)=s_x(f) |H(f)|^2}$$
 
-    ```{prf}
+    ```{prf:proof}
+    
      Comme $s_y(f)=\text{TF}[R_y(\tau)]$, le résultat découle de l'avant dernière ligne de l'équation précédente.
+    
     ```
 
 -   <span style="color:rgba(var(--pst-color-link),1)"> **Moyenne :**</span> 
@@ -144,7 +146,7 @@ Les relations de Wiener-Lee sont valables pour des signaux aléatoires stationna
     
     $$\boxed{E[y(t)]=H(0) E[x(t)]}$$
 
-    ```{prf}
+    ```{prf:proof}
     
     En effet 
     
@@ -166,18 +168,17 @@ Les relations de Wiener-Lee sont valables pour des signaux aléatoires stationna
     
     $$\boxed{E[y_1(t)y_2^*(t-\tau)]=\int_{\mathbb{R}} H_1(f) H_2^*(f) \exp(j 2 \pi f \tau)s_x(f) df.}$$
 
-    ```{prf}
+    ```{prf:proof}
     
     La preuve est similaire à celle utilisée pour déterminer l'autocorrélation de la sortie d'un filtre 
     
     $$\begin{split}
     R_{y_1 y_2}(\tau)&= E[ y_1(t) y_2^*(t-\tau)] \\
-    &=  \l\langle y_1(t), y_2(t-\tau) \rangle_1  \\
+    &=  \langle y_1(t), y_2(t-\tau) \rangle_1  \\
     &=\langle \exp(j2 \pi ft)H_1(f), \exp(j2 \pi f(t - \tau)H_2(f) \rangle_2 \\
     &=\int_{\mathbb {R}} \exp(j2 \pi ft)H_1(f) \exp(-j2 \pi f(t - \tau)) H_2^*(f)s_x(f)df \\
     & =\int_{\mathbb {R}} H_1(f)H_2^*(f) \exp(j2 \pi f  \tau) s_x(f)df.
      \end{split}$$ 
      
-    Cette relation montre par exemple que si les deuxcanaux $H_1(f)$ et $H_2(f)$ ont de supports disjoints (ce qui implique $H_1(f)H_2(f)=0$, on a $E[ y_1(t) y_2^*(t-\tau)]=0$, ce qui signifie que les signaux $y_1(t)$ et $y_2(t-\tau)$ sont décorrélés,
-    ce qui n'est pas très intuitif car l'entrée des deux filtres est la même !! 
+    Cette relation montre par exemple que si les deuxcanaux $H_1(f)$ et $H_2(f)$ ont de supports disjoints (ce qui implique $H_1(f)H_2(f)=0$, on a $E[ y_1(t) y_2^*(t-\tau)]=0$,       ce qui signifie que les signaux $y_1(t)$ et $y_2(t-\tau)$ sont décorrélés, ce qui n'est pas très intuitif car l'entrée des deux filtres est la même !! 
     ```
