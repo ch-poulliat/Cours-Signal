@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4.2. Cas des signaux aléatoires &#8212; Traitement du Signal - Signaux et Systèmes Continus</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -30,32 +29,33 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/mystyle-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="4.3. Quantification" href="ch4sec3.html" />
@@ -521,14 +521,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="cas-des-signaux-aleatoires">
+  <div class="section" id="cas-des-signaux-aleatoires">
 <h1><span class="section-number">4.2. </span>Cas des signaux aléatoires<a class="headerlink" href="#cas-des-signaux-aleatoires" title="Permalink to this headline">#</a></h1>
 <p>L’objectif de cette partie est d’expliquer comment on peut déterminer la fonction d’autocorrélation et la densité spectrale de puissance d’un signal défini par une transformée non-linéaire sans mémoire <span class="math notranslate nohighlight">\(g\)</span> d’un signal aléatoire stationnaire <span class="math notranslate nohighlight">\(x(t)\)</span>. Comme nous allons le voir, l’outil fondamental pour cette détermination est le théorème de Price qui est résumé ci-dessous (dans sa version la plus simple).</p>
-<section id="theoreme-de-price">
+<div class="section" id="theoreme-de-price">
 <h2><span class="section-number">4.2.1. </span>Théorème de Price<a class="headerlink" href="#theoreme-de-price" title="Permalink to this headline">#</a></h2>
 <div class="proof theorem admonition" id="theorem-0">
 <p class="admonition-title"><span class="caption-number">Theorem 4.1 </span> (Théorème de Price.)</p>
-<section class="theorem-content" id="proof-content">
+<div class="theorem-content section" id="proof-content">
 <p>Pour tout vecteur Gaussien centré <span class="math notranslate nohighlight">\((X_1,X_2)\)</span>, on a pour toute fonction non-linéaire <span class="math notranslate nohighlight">\(g\)</span></p>
 <div class="math notranslate nohighlight">
 \[
@@ -543,10 +543,10 @@ title="Print to PDF"
 \frac{\partial R_y(\tau) }{\partial R_x(\tau)} = E \left[
 \frac{\partial y(t)}{\partial x(t)} \frac{\partial y(t-\tau)}{\partial x(t-\tau)} \right].
 \]</div>
-</section>
+</div>
 </div><p>On remarquera que la relation ci-dessus utilise implicitement le fait que <span class="math notranslate nohighlight">\(y(t)=g[x(t)]\)</span> est un signal aléatoire stationnaire, ce qui découle du fait que <span class="math notranslate nohighlight">\(\boldsymbol{x}  = (x(t),x(t-\tau))^T\)</span> est un vecteur Gaussien centré de matrice de covariance notée <span class="math notranslate nohighlight">\(\Sigma\)</span>. En effet</p>
-<div class="amsmath math notranslate nohighlight" id="equation-87e9902c-1ebc-4254-9341-05b9311de7fe">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-87e9902c-1ebc-4254-9341-05b9311de7fe" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-69ab735f-7154-40cb-b86a-9cb6485ff383">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-69ab735f-7154-40cb-b86a-9cb6485ff383" title="Permalink to this equation">#</a></span>\[\begin{equation}
 E\left[ Y(t) Y(t-\tau) \right] = \int \int g\left( x_1 \right)
 g\left( x_2 \right) p\left( x_1, x_2 \right) d x_1 dx_2 \label{stat}
 \end{equation}\]</div>
@@ -577,8 +577,8 @@ p(x_1,.)= \frac{1}{\sqrt{ 2 \pi \sigma_1^2}} \exp \left(
 -\frac{x_1^2}{2 \sigma_1^2} \right).
 \]</div>
 <p>Comme <span class="math notranslate nohighlight">\(\sigma_1^2=\text{var}[x(t)]=R_x(0)\)</span>, on en déduit que <span class="math notranslate nohighlight">\(E\left[ Y(t) \right]\)</span> ne dépend que de <span class="math notranslate nohighlight">\(R_x(0)\)</span> et donc ne dépend pas de <span class="math notranslate nohighlight">\(t\)</span>.</p>
-</section>
-<section id="exemple-d-application-le-quadrateur">
+</div>
+<div class="section" id="exemple-d-application-le-quadrateur">
 <h2><span class="section-number">4.2.2. </span>Exemple d’application : le quadrateur<a class="headerlink" href="#exemple-d-application-le-quadrateur" title="Permalink to this headline">#</a></h2>
 <p>Dans le cas où <span class="math notranslate nohighlight">\(y(t)=x^2(t)\)</span>, l’application du théorème de Price permet d’obtenir</p>
 <div class="math notranslate nohighlight">
@@ -610,15 +610,15 @@ E[x^2(t)]=\sigma^2 =R_x(0) \quad \text{et} \quad E[x^4(t)]=3 \sigma^4 =3R^2_x(0)
 <p>d’où <span class="math notranslate nohighlight">\(K=R_x^2(0)\)</span>.</p>
 <div class="proof remark admonition" id="remark-1">
 <p class="admonition-title"><span class="caption-number">Remark 4.1 </span></p>
-<section class="remark-content" id="proof-content">
+<div class="remark-content section" id="proof-content">
 <p>pour déterminer la constante <span class="math notranslate nohighlight">\(K\)</span>, on peut aussi utiliser le fait que pour un signal gaussien centré, <span class="math notranslate nohighlight">\(x(t)\)</span> et <span class="math notranslate nohighlight">\(x(t-\tau)\)</span> sont asymptotiquement (i.e., quand <span class="math notranslate nohighlight">\(\tau \to \infty\)</span>) décorrélés, et donc asymptotiquement indépendants, d’où</p>
 <div class="math notranslate nohighlight">
 \[
 \lim\limits_{\tau \to \infty} R_x(\tau)=0 \quad \text{et} \quad \lim\limits_{\tau \to \infty} E[x^2(t) x^2(t-\tau)] =R_x^2(0).
 \]</div>
-</section>
-</div></section>
-<section id="autre-exemple-d-application-theoreme-de-van-vleck">
+</div>
+</div></div>
+<div class="section" id="autre-exemple-d-application-theoreme-de-van-vleck">
 <h2><span class="section-number">4.2.3. </span>Autre exemple d’application : Théorème de Van Vleck<a class="headerlink" href="#autre-exemple-d-application-theoreme-de-van-vleck" title="Permalink to this headline">#</a></h2>
 <p>L’application du théorème de Price est parfois plus compliquée que dans l’exemple précédent, comme nous allons le voir dans cet exemple où <span class="math notranslate nohighlight">\(y(t) = \text{sign}[x(t)]\)</span> (la fonction <span class="math notranslate nohighlight">\(\text{sign}(x)\)</span> vaut <span class="math notranslate nohighlight">\(1\)</span> pour <span class="math notranslate nohighlight">\(x&gt;0\)</span>, <span class="math notranslate nohighlight">\(-1\)</span> pour <span class="math notranslate nohighlight">\(x&lt;0\)</span> et par convention <span class="math notranslate nohighlight">\(\text{sign}(0)=0\)</span>). Dans cet exemple, le théorème de Price permet d’obtenir</p>
 <div class="math notranslate nohighlight">
@@ -661,8 +661,8 @@ R_y(0)=E[y^2(t)]=1
 \[
 \boxed{R_y(\tau)=\frac{2} {\pi} \text{Arcsin} \left[ \frac{R_x(\tau)}{R_x(0)} \right]}.
 \]</div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -714,7 +714,7 @@ R_y(0)=E[y^2(t)]=1
   
     By J-Y. Tourneret et C. Poulliat<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2021.<br/>
 </p>
         </footer>
     </div>

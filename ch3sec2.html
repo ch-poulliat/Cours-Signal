@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3.2. Filtrage des signaux déterministes &#8212; Traitement du Signal - Signaux et Systèmes Continus</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -30,32 +29,33 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/mystyle-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="3.3. Filtrage des signaux aléatoires" href="ch3sec3.html" />
@@ -555,12 +555,12 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="filtrage-des-signaux-deterministes">
+  <div class="section" id="filtrage-des-signaux-deterministes">
 <h1><span class="section-number">3.2. </span>Filtrage des signaux déterministes<a class="headerlink" href="#filtrage-des-signaux-deterministes" title="Permalink to this headline">#</a></h1>
 <p>Parmi les systèmes à temps continu d’intérêt, on s’intéressera surtout aux systèmes à la fois linéaires et invariants par décalage. Ils
 définiront une classe de systèmes dénommés <em>filtres linéaires invariants par décalage (FLID)</em>. On supposera dans cette section que les signaux en
 entrée sont des signaux déterministes.</p>
-<section id="reponse-impulsionnelle-convolution-et-notion-de-filtre">
+<div class="section" id="reponse-impulsionnelle-convolution-et-notion-de-filtre">
 <h2><span class="section-number">3.2.1. </span>Réponse impulsionnelle, convolution et notion de filtre<a class="headerlink" href="#reponse-impulsionnelle-convolution-et-notion-de-filtre" title="Permalink to this headline">#</a></h2>
 <p>Par définition, la réponse impulsionnelle d’un système notée <span class="math notranslate nohighlight">\(h\)</span> est la fonction obtenue en sortie d’un système <span class="math notranslate nohighlight">\(T\)</span> quand on applique une
 impulsion de Dirac à l’entrée. Formellement, on a donc la caractérisation suivante</p>
@@ -592,8 +592,8 @@ simplement <em><strong>filtre</strong></em>. Comme <span class="math notranslate
 impulsionnelle, et donc l’opérateur <span class="math notranslate nohighlight">\(T\)</span> est souvent assimilé à <span class="math notranslate nohighlight">\(h\)</span>, qui est appelé filtre linéaire invariant par décalage (FLID). La notion de
 filtre fait référence au fait que la sortie est une version “moyennée” de l’entrée par la réponse impulsionnelle <em>retournée</em>. L’opération de
 convolution qui lie l’entrée et la sortie du système est appelée <em><strong>filtrage</strong></em>.</p>
-</section>
-<section id="condition-necessaire-et-suffisante-de-stabilite-des-flid">
+</div>
+<div class="section" id="condition-necessaire-et-suffisante-de-stabilite-des-flid">
 <h2><span class="section-number">3.2.2. </span>Condition nécessaire et suffisante de stabilité des FLID<a class="headerlink" href="#condition-necessaire-et-suffisante-de-stabilite-des-flid" title="Permalink to this headline">#</a></h2>
 <p>Un FLID est stable si et seulement si</p>
 <div class="math notranslate nohighlight">
@@ -601,8 +601,8 @@ convolution qui lie l’entrée et la sortie du système est appelée <em><stron
 <p>La condition est <strong>suffisante</strong> : si l’entrée est dans <span class="math notranslate nohighlight">\(\mathcal{L}_{p}(\mathbb{R}),\)</span> alors la sortie d’un système stable est
 dans <span class="math notranslate nohighlight">\(\mathcal{L}_{p}(\mathbb{R})\)</span> (car le module d’une intégrale est inférieur à l’intégrale du module).</p>
 <p>La condition est également <strong>nécessaire</strong> même si la preuve est un peu plus technique.</p>
-</section>
-<section id="caracterisation-d-un-filtre">
+</div>
+<div class="section" id="caracterisation-d-un-filtre">
 <h2><span class="section-number">3.2.3. </span>Caractérisation d’un filtre<a class="headerlink" href="#caracterisation-d-un-filtre" title="Permalink to this headline">#</a></h2>
 <p>Dans le cas de signaux déterministes, on vérifie qu’une opération définit un filtre linéaire en utilisant la propriété suivante</p>
 <div class="math notranslate nohighlight">
@@ -632,7 +632,7 @@ associée <span class="math notranslate nohighlight">\(H(f)\)</span> (appelé é
 <li><p>une identification directe des termes du produit de convolution pour une entrée <span class="math notranslate nohighlight">\(x(t)\)</span> arbitraire.</p></li>
 </ul>
 <p>On remarquera enfin que toute opération linéaire n’est pas un filtre (considérer par exemple <span class="math notranslate nohighlight">\(y(t)=m(t)x(t)\)</span> ou <span class="math notranslate nohighlight">\(y(t)=x(0)\)</span>).</p>
-<section id="resume">
+<div class="section" id="resume">
 <h3><span class="section-number">3.2.3.1. </span>Résumé<a class="headerlink" href="#resume" title="Permalink to this headline">#</a></h3>
 <p>Par la suite, le filtrage d’un signal déterministe <span class="math notranslate nohighlight">\(x(t)\)</span> par un filtre de réponse impulsionnelle <span class="math notranslate nohighlight">\(h(t)\)</span>, défini par une opération de
 convolution qui produit un signal <span class="math notranslate nohighlight">\(y(t)\)</span> sera noté</p>
@@ -640,9 +640,9 @@ convolution qui produit un signal <span class="math notranslate nohighlight">\(y
 \[y(t)=x(t)*h(t)= \int_{\mathbb{R}} x(\tau) h(t-\tau) ds = \int_{\mathbb{R}} h(\tau) x(t-\tau) ds = h(t)*x(t).\]</div>
 <p>Souvent, pour que le filtre soit réalisable physiquement, il faut que la réponse impulsionnelle soit <strong>réelle</strong> (pour éviter qu’une entrée réelle
 puisse fournir une sortie à valeur complexe), <strong>causale</strong> (i.e., <span class="math notranslate nohighlight">\(h(t)=0\)</span> si <span class="math notranslate nohighlight">\(t&lt;0\)</span> pour que la sortie du filtre à l’instant <span class="math notranslate nohighlight">\(t\)</span> ne dépende que des entrées aux instants inférieurs à <span class="math notranslate nohighlight">\(t\)</span>), dans <span class="math notranslate nohighlight">\(L^1\)</span> (i.e., telle que <span class="math notranslate nohighlight">\(\int_{\mathbb{R}} |h(u)|du &lt; + \infty\)</span> pour que le filtre soit <strong>stable</strong>, c’est-à-dire que la sortie soit bornée pour toute entrée bornée).</p>
-</section>
-</section>
-<section id="relations-entree-sortie-de-wiener-lee">
+</div>
+</div>
+<div class="section" id="relations-entree-sortie-de-wiener-lee">
 <h2><span class="section-number">3.2.4. </span>Relations entrée-sortie de Wiener-Lee<a class="headerlink" href="#relations-entree-sortie-de-wiener-lee" title="Permalink to this headline">#</a></h2>
 <p>Pour les signaux déterministe (ie. à énergie finie, à puissance finie et périodiques), on peut caractériser analytiquement la fonction
 d’autocorrélation et la densité spectrale de la sortie du système en fonction des caractéristiques de l’entrée. Ainsi, les relations entre
@@ -708,8 +708,8 @@ R_{y x}(\tau) &amp;=\frac{1}{T_{0}} \int_{-T_{0} / 2}^{T_{0} / 2} y(t) x^{*}(t-\
 \end{aligned}\end{split}\]</div>
 <p>Les autres quantités se déduisent de la même manière. Pour les signaux à puissance finie non périodiques les preuves sont similaires en changeant de produit scalaire.</p>
 </div>
-</section>
-<section id="formules-des-interferences-et-intercorrelation-entree-sortie">
+</div>
+<div class="section" id="formules-des-interferences-et-intercorrelation-entree-sortie">
 <h2><span class="section-number">3.2.5. </span>Formules des interférences et intercorrélation entrée-sortie<a class="headerlink" href="#formules-des-interferences-et-intercorrelation-entree-sortie" title="Permalink to this headline">#</a></h2>
 <p>On considère deux signaux <span class="math notranslate nohighlight">\(y_1\)</span> et <span class="math notranslate nohighlight">\(y_2\)</span> obtenus par filtrage linéaire d’un même signal d’entrée <span class="math notranslate nohighlight">\(x(t)\)</span> :</p>
 <div class="math notranslate nohighlight">
@@ -741,11 +741,11 @@ R_{yx}(\tau)&amp;= h(\tau)* R_x(\tau).
 </div>
 <div class="proof remark admonition" id="remark-0">
 <p class="admonition-title"><span class="caption-number">Remark 3.1 </span></p>
-<section class="remark-content" id="proof-content">
+<div class="remark-content section" id="proof-content">
 <p>La quantité <span class="math notranslate nohighlight">\(f\)</span> est appelée fréquence, mesurée en Hertz (Hz), et souvent utilisée par les francophones, alors que la quantité <span class="math notranslate nohighlight">\(\omega=2 \pi f\)</span> est la pulsation en radiant par seconde (rad/s) qui correspond plus à la notation internationale. En particulier, pour des logiciels comme Matlab, c’est souvent la pulsation qui est utilisée pour la représentation fréquentielle des signaux.</p>
-</section>
-</div></section>
-</section>
+</div>
+</div></div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -797,7 +797,7 @@ R_{yx}(\tau)&amp;= h(\tau)* R_x(\tau).
   
     By J-Y. Tourneret et C. Poulliat<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2021.<br/>
 </p>
         </footer>
     </div>

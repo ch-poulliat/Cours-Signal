@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3.1. Systèmes à temps continu: définitions et propriétés &#8212; Traitement du Signal - Signaux et Systèmes Continus</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -30,32 +29,33 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/mystyle-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="3.2. Filtrage des signaux déterministes" href="ch3sec2.html" />
@@ -587,9 +587,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="systemes-a-temps-continu-definitions-et-proprietes">
+  <div class="section" id="systemes-a-temps-continu-definitions-et-proprietes">
 <h1><span class="section-number">3.1. </span>Systèmes à temps continu: définitions et propriétés<a class="headerlink" href="#systemes-a-temps-continu-definitions-et-proprietes" title="Permalink to this headline">#</a></h1>
-<section id="span-style-color-rgba-var-pst-color-link-1-systeme-a-temps-continu-span">
+<div class="section" id="span-style-color-rgba-var-pst-color-link-1-systeme-a-temps-continu-span">
 <h2><span class="section-number">3.1.1. </span><span style="color:rgba(var(--pst-color-link),1)"> Système à temps continu</span><a class="headerlink" href="#span-style-color-rgba-var-pst-color-link-1-systeme-a-temps-continu-span" title="Permalink to this headline">#</a></h2>
 <p>Dans un cadre déterministe, un système à temps continu est un opérateur <span class="math notranslate nohighlight">\(T\)</span> qui associe une fonction <span class="math notranslate nohighlight">\(y\)</span> à une
 fonction d’entrée <span class="math notranslate nohighlight">\(x,\)</span> ie. <span class="math notranslate nohighlight">\(y=T[x]\)</span> avec</p>
@@ -597,32 +597,32 @@ fonction d’entrée <span class="math notranslate nohighlight">\(x,\)</span> ie
 \[y(t)=T[x(t)], \forall t \in \mathbb{R}.\]</div>
 <p>Les entrées et sorties de ce système seront typiquement dans <span class="math notranslate nohighlight">\(\mathcal{L}_{+\infty}(\mathbb{R})\)</span> ou
 <span class="math notranslate nohighlight">\(\mathcal{L}_{2}(\mathbb{R}).\)</span></p>
-</section>
-<section id="span-style-color-rgba-var-pst-color-link-1-systeme-lineaire-span">
+</div>
+<div class="section" id="span-style-color-rgba-var-pst-color-link-1-systeme-lineaire-span">
 <h2><span class="section-number">3.1.2. </span><span style="color:rgba(var(--pst-color-link),1)"> Système linéaire</span><a class="headerlink" href="#span-style-color-rgba-var-pst-color-link-1-systeme-lineaire-span" title="Permalink to this headline">#</a></h2>
 <p>Un système sera dit linéaire s’il vérifie <span class="math notranslate nohighlight">\(\forall a_1,a_2 \in \mathbb{C},\)</span></p>
 <div class="math notranslate nohighlight">
 \[T\left[a_{1} x_{1}(t)+a_{2} x_{2}(t)\right]=a_{1} T\left[x_{1}(t)\right]+a_{2} T\left[x_{2}(t)\right].\]</div>
-</section>
-<section id="span-style-color-rgba-var-pst-color-link-1-systeme-sans-memoire-span">
+</div>
+<div class="section" id="span-style-color-rgba-var-pst-color-link-1-systeme-sans-memoire-span">
 <h2><span class="section-number">3.1.3. </span><span style="color:rgba(var(--pst-color-link),1)"> Système sans mémoire</span><a class="headerlink" href="#span-style-color-rgba-var-pst-color-link-1-systeme-sans-memoire-span" title="Permalink to this headline">#</a></h2>
 <p>Un système sera dît sans mémoire si sa sortie à l’instant <span class="math notranslate nohighlight">\(t\)</span> ne dépend que de l’entrée au même instant.</p>
-</section>
-<section id="span-style-color-rgba-var-pst-color-link-1-systeme-causal-span">
+</div>
+<div class="section" id="span-style-color-rgba-var-pst-color-link-1-systeme-causal-span">
 <h2><span class="section-number">3.1.4. </span><span style="color:rgba(var(--pst-color-link),1)"> Système causal</span><a class="headerlink" href="#span-style-color-rgba-var-pst-color-link-1-systeme-causal-span" title="Permalink to this headline">#</a></h2>
 <p>Un système est dit causal si la sortie à l’instant <span class="math notranslate nohighlight">\(t\)</span> ne dépend de l’entrée que pour des instants <span class="math notranslate nohighlight">\(t'\leq t\)</span>, i.e., la sortie un instant
 donné ne dépend pas d’un instant futur. Cette propriété est souvent requise pour qu’un système physique analogique soit réalisable.
 Cependant nous verrons que pour un signal numérique, cette contrainte peut être contournée car si le système est non causal cela suppose juste
 que le système peut être réalisable au prix d’un délai de traitement avec stockage des échantillons.</p>
-</section>
-<section id="span-style-color-rgba-var-pst-color-link-1-systeme-invariant-par-decalage-span">
+</div>
+<div class="section" id="span-style-color-rgba-var-pst-color-link-1-systeme-invariant-par-decalage-span">
 <h2><span class="section-number">3.1.5. </span><span style="color:rgba(var(--pst-color-link),1)"> Système invariant par décalage</span><a class="headerlink" href="#span-style-color-rgba-var-pst-color-link-1-systeme-invariant-par-decalage-span" title="Permalink to this headline">#</a></h2>
 <p>Un système est dit invariant par décalage ou encore invariant dans le temps s’il vérifie la relation suivante:</p>
 <div class="math notranslate nohighlight">
 \[\text {Si } y(t)=T[x(t)] \text { alors } T\left[x\left(t-t_{0}\right)\right]=y\left(t-t_{0}\right).\]</div>
 <p>Cela signifie que si l’entrée du système est translatée dans le temps, la sortie l’est également du même décalage.</p>
-</section>
-<section id="span-style-color-rgba-var-pst-color-link-1-systeme-stable-caracterisation-generale-span">
+</div>
+<div class="section" id="span-style-color-rgba-var-pst-color-link-1-systeme-stable-caracterisation-generale-span">
 <h2><span class="section-number">3.1.6. </span><span style="color:rgba(var(--pst-color-link),1)"> Système stable : caractérisation générale </span><a class="headerlink" href="#span-style-color-rgba-var-pst-color-link-1-systeme-stable-caracterisation-generale-span" title="Permalink to this headline">#</a></h2>
 <p>Un système est dit stable si une entrée bornée produit une sortie bornée, i.e., si</p>
 <div class="math notranslate nohighlight">
@@ -632,7 +632,7 @@ générale et s’applique quel soit le type de système, linéaire, non linéai
 <div class="exercise admonition" id="ch3sec1-exercise-0">
 
 <p class="admonition-title"><span class="caption-number">Exercise 3.1 </span></p>
-<section id="exercise-content">
+<div class="section" id="exercise-content">
 <p>Pouvez-vous donner les caractéristiques des systèmes suivants et identifier l’opérateur <span class="math notranslate nohighlight">\(T[.]?\)</span></p>
 <ol class="simple">
 <li><p>Système à décalage : <span class="math notranslate nohighlight">\(y(t)=x(t-t_0), t \in \mathbb{R}.\)</span> À quelle
@@ -643,10 +643,10 @@ condition le système est-il causal?</p></li>
 <span class="math notranslate nohighlight">\(y(t)=\frac{1}{T} \int_{t-T / 2}^{t+T / 2} x(\tau) d \tau, \quad t \in \mathbb{R}.\)</span></p></li>
 <li><p>Quadrateur : <span class="math notranslate nohighlight">\(y(t)=|x(t)|^2, \quad t \in \mathbb{R}.\)</span></p></li>
 </ol>
-</section>
 </div>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -698,7 +698,7 @@ condition le système est-il causal?</p></li>
   
     By J-Y. Tourneret et C. Poulliat<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2021.<br/>
 </p>
         </footer>
     </div>

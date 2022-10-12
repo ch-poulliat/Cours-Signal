@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1.4. Fonctions spéciales &#8212; Traitement du Signal - Signaux et Systèmes Continus</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -30,32 +29,33 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/mystyle-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="1.5. Formulaire et Tables des principales transformées de Fourier" href="ch1sec5.html" />
@@ -541,9 +541,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="fonctions-speciales">
+  <div class="section" id="fonctions-speciales">
 <h1><span class="section-number">1.4. </span>Fonctions spéciales<a class="headerlink" href="#fonctions-speciales" title="Permalink to this headline">#</a></h1>
-<section id="impulsion-de-dirac">
+<div class="section" id="impulsion-de-dirac">
 <h2><span class="section-number">1.4.1. </span>Impulsion de Dirac<a class="headerlink" href="#impulsion-de-dirac" title="Permalink to this headline">#</a></h2>
 <p>L’impulsion de Dirac, souvent dénommée abusivement fonction de Dirac, n’est pas une fonction mais une distribution (voir Cours Fourier et Intégration), encore appelée fonction généralisée. Pour toute fonction continue <span class="math notranslate nohighlight">\(x(t)\)</span> en <span class="math notranslate nohighlight">\(0\)</span>, l’impulsion de Dirac est définie par</p>
 <div class="math notranslate nohighlight">
@@ -575,8 +575,8 @@ alors les deux transformées de Fourier suivantes</p>
 <p>et en appliquant les propriétés de décalage, on obtient</p>
 <div class="math notranslate nohighlight">
 \[\textrm{TF}\left[\delta\left(t-t_{0}\right)\right]=\exp \left(-j 2 \pi f t_{0}\right), \textrm{TF}\left[\exp \left(j 2 \pi f_{0} t\right)\right]=\delta\left(f-f_{0}\right).\]</div>
-</section>
-<section id="train-de-dirac">
+</div>
+<div class="section" id="train-de-dirac">
 <h2><span class="section-number">1.4.2. </span>Train de Dirac<a class="headerlink" href="#train-de-dirac" title="Permalink to this headline">#</a></h2>
 <p>Par définition, un train de Dirac (appelé aussi <em>peigne de Diracs</em>) est une séquence infinie
 d’impulsions de Dirac défini comme suit</p>
@@ -592,8 +592,8 @@ cet opérateur. On aura en particulier la relation suivante</p>
 \[x_e(t)=x_a(t).\amalg \hspace{-0.3cm}\amalg _{T}\left( t\right)=\underset{k\in \mathbb{Z}}{\sum } x_a(kT)\delta \left( t-kT\right).\]</div>
 <p>De cette relation simple, dans la deuxième partie du cours, on pourra alors déterminer à quelle(s) condition(s) on peut représenter un signal
 continu à l’aide des échantillons numériques <span class="math notranslate nohighlight">\(\{x[n]=x_a(nT)\}_{n \in \mathbb{Z}}\)</span> sans perte d’information (ou de manière équivalent sans “distorsion”). De même, on pourra lier les propriétés spectrales de <span class="math notranslate nohighlight">\(x_e(t)\)</span> avec celles de <span class="math notranslate nohighlight">\(x_a(t)\)</span> et de la séquence <span class="math notranslate nohighlight">\(\{x[n]\}_{n \in \mathbb{Z}}.\)</span></p>
-</section>
-<section id="fonction-indicatrice-et-operateur-de-restriction">
+</div>
+<div class="section" id="fonction-indicatrice-et-operateur-de-restriction">
 <h2><span class="section-number">1.4.3. </span>Fonction indicatrice et opérateur de restriction<a class="headerlink" href="#fonction-indicatrice-et-operateur-de-restriction" title="Permalink to this headline">#</a></h2>
 <p>Pour tout interval <span class="math notranslate nohighlight">\(\mathcal{I} \subset \mathbb{R},\)</span> on définit la fonction indicatrice</p>
 <div class="math notranslate nohighlight">
@@ -610,8 +610,8 @@ continu à l’aide des échantillons numériques <span class="math notranslate 
 x(t), &amp; \text { pour } t \in \mathcal{I} \\
 0, &amp; \text { sinon }
 \end{aligned}\right.\end{split}\]</div>
-</section>
-<section id="fonction-de-heaviside-echelon-unite">
+</div>
+<div class="section" id="fonction-de-heaviside-echelon-unite">
 <h2><span class="section-number">1.4.4. </span>Fonction de Heaviside - Echelon unité<a class="headerlink" href="#fonction-de-heaviside-echelon-unite" title="Permalink to this headline">#</a></h2>
 <p>La fonction de Heaviside, encore appelée <em>échelon unité</em>, est définie par</p>
 <div class="math notranslate nohighlight">
@@ -632,17 +632,17 @@ x(t), &amp; \text { pour } t \geq 0 \\
 <div class="exercise admonition" id="exer1">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.1 </span></p>
-<section id="exercise-content">
+<div class="section" id="exercise-content">
 <p>Montrer que la restriction de <span class="math notranslate nohighlight">\(x(t)\)</span> à un support <span class="math notranslate nohighlight">\([t_0,t_1)\)</span> peut s’écrire</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}x_{[t_0,t_1)}(t)=\left\{\begin{aligned}
 x(t), &amp; \text { pour } t \in\left[t_{0}, t_{1}\right) \\
 0, &amp; \text { sinon }
 \end{aligned}\right.=\left(u\left(t-t_{0}\right)-u\left(t-t_{1}\right)\right) x(t)\end{split}\]</div>
-</section>
 </div>
-</section>
-<section id="fonction-porte">
+</div>
+</div>
+<div class="section" id="fonction-porte">
 <h2><span class="section-number">1.4.5. </span>Fonction Porte<a class="headerlink" href="#fonction-porte" title="Permalink to this headline">#</a></h2>
 <p>La fonction porte est une fonction très souvent rencontrée en théorie du signal, car elle permet de traduire que l’on a souvent qu’un
 enregistrement des signaux sur une durée finie (notée <span class="math notranslate nohighlight">\(T\)</span>). Cette fonction porte est définie par</p>
@@ -654,12 +654,12 @@ enregistrement des signaux sur une durée finie (notée <span class="math notran
 <div class="exercise admonition" id="exer2">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.2 </span></p>
-<section id="exercise-content">
+<div class="section" id="exercise-content">
 <p>Exprimer la fonction porte en fonction de la fonction échelon.</p>
-</section>
 </div>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -711,7 +711,7 @@ enregistrement des signaux sur une durée finie (notée <span class="math notran
   
     By J-Y. Tourneret et C. Poulliat<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2021.<br/>
 </p>
         </footer>
     </div>

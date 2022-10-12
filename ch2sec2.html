@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2.2. Signaux déterministes périodiques à puissance finie &#8212; Traitement du Signal - Signaux et Systèmes Continus</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -30,32 +29,33 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/mystyle-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="2.3. Signaux déterministes non périodiques à puissance finie" href="ch2sec3.html" />
@@ -464,16 +464,16 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="signaux-deterministes-periodiques-a-puissance-finie">
+  <div class="section" id="signaux-deterministes-periodiques-a-puissance-finie">
 <h1><span class="section-number">2.2. </span>Signaux déterministes périodiques à puissance finie<a class="headerlink" href="#signaux-deterministes-periodiques-a-puissance-finie" title="Permalink to this headline">#</a></h1>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 2.5 </span> (Signaux déterministes périodiques à puissance finie. )</p>
-<section class="definition-content" id="proof-content">
+<div class="definition-content section" id="proof-content">
 <p>On dit qu’un signal à temps continu <span class="math notranslate nohighlight">\(x(t)\)</span> est à puissance finie péridodique de période <span class="math notranslate nohighlight">\(T_0\)</span> si <span class="math notranslate nohighlight">\(x(t+T_0)=x(t), \forall t\)</span>
 (périodicité de période <span class="math notranslate nohighlight">\(T_0\)</span>) et si</p>
 <div class="math notranslate nohighlight">
 \[P=\frac{1}{T_0} \int_{- \frac{T_0}{2}}^{ \frac{T_0}{2}} |x(t)|^2dt &lt; \infty\]</div>
-</section>
+</div>
 </div><p>Par ailleurs, si <span class="math notranslate nohighlight">\(x(t)\)</span> est à puissance finie périodique, alors son énergie est infinie. On peut définir un produit scalaire pour les
 signaux périodiques à puissance finie comme suit</p>
 <div class="math notranslate nohighlight">
@@ -482,7 +482,7 @@ signaux périodiques à puissance finie comme suit</p>
 spectrale de puissance d’un signal périodique à puissance finie comme suit :</p>
 <div class="proof definition admonition" id="definition-1">
 <p class="admonition-title"><span class="caption-number">Definition 2.6 </span></p>
-<section class="definition-content" id="proof-content">
+<div class="definition-content section" id="proof-content">
 <ul>
 <li><p><em><strong>Fonction d’autocorrélation :</strong></em></p>
 <div class="math notranslate nohighlight">
@@ -498,7 +498,7 @@ spectrale de puissance d’un signal périodique à puissance finie comme suit :
 \[s_x(f) = \textrm{TF}[R_x(\tau)] = \int_{\mathbb{R}} R_x(\tau) \exp \left(-j 2 \pi f \tau \right) d\tau.\]</div>
 </li>
 </ul>
-</section>
+</div>
 </div><p>La densité spectrale de puissance d’un signal déterministe périodique à puissance finie de période <span class="math notranslate nohighlight">\(T_0\)</span> est liée à sa décomposition en série de
 Fourier par la relation simple</p>
 <div class="math notranslate nohighlight">
@@ -520,7 +520,7 @@ Elle se démontre comme suit</p>
 \[s_x(f)= \text{TF}[R_x(\tau)] = \sum_k |c_k|^2 \ \text{TF} \left[ \exp(j 2 \pi k f_0 \tau) \right]=\sum_{k \in \mathbb{Z}} |c_k|^2 \delta(f-kf_0).\]</div>
 <div class="proof example admonition" id="example-2">
 <p class="admonition-title"><span class="caption-number">Example 2.1 </span></p>
-<section class="example-content" id="proof-content">
+<div class="example-content section" id="proof-content">
 <p>Un exemple classique appelé parfois le <strong>secteur</strong> est le signal défini par</p>
 <div class="math notranslate nohighlight">
 \[x(t)= A \cos(2 \pi f_0 t)\]</div>
@@ -530,8 +530,8 @@ Elle se démontre comme suit</p>
 <p>qui est une fonction périodique de même période que <span class="math notranslate nohighlight">\(x(t)\)</span> et qui admet la densité spectrale de puissance</p>
 <div class="math notranslate nohighlight">
 \[s_x(f)=\frac{A^2}{4} \left[ \delta(f-f_0) + \delta(f+f_0)\right].\]</div>
-</section>
-</div></section>
+</div>
+</div></div>
 
     <script type="text/x-thebe-config">
     {
@@ -583,7 +583,7 @@ Elle se démontre comme suit</p>
   
     By J-Y. Tourneret et C. Poulliat<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2021.<br/>
 </p>
         </footer>
     </div>

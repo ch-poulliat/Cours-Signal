@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>5.3. Filtrage de Wiener &#8212; Traitement du Signal - Signaux et Systèmes Continus</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -30,32 +29,33 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/mystyle-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="5.4. Preuve du théorème de Price" href="ch5sec4.html" />
@@ -531,9 +531,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="filtrage-de-wiener">
+  <div class="section" id="filtrage-de-wiener">
 <h1><span class="section-number">5.3. </span>Filtrage de Wiener<a class="headerlink" href="#filtrage-de-wiener" title="Permalink to this headline">#</a></h1>
-<section id="definition">
+<div class="section" id="definition">
 <h2><span class="section-number">5.3.1. </span>Définition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
 <p>Le filtre de Wiener est un filtre qui permet de débruiter un signal aléatoire stationnaire de densité spectrale de puissance connue  noyé dans un bruit additif supposé également stationnaire. On considère donc deux processus aléatoires stationnaires <span class="math notranslate nohighlight">\(I(t)\)</span> et <span class="math notranslate nohighlight">\(B(t)\)</span>  de moyennes nulles (ce qui simplifie un peu l’analyse) <span class="math notranslate nohighlight">\(E[B(t)]=E[I(t)]=0\)</span>, de fonctions d’autocorrélation <span class="math notranslate nohighlight">\(R_I(\tau), R_B(\tau)\)</span> et de densités spectrales de puissance <span class="math notranslate nohighlight">\(s_I(f)\)</span> et <span class="math notranslate nohighlight">\(s_B(f)\)</span>. On suppose qu’on peut observer</p>
 <div class="math notranslate nohighlight">
@@ -541,8 +541,8 @@ title="Print to PDF"
 X(t)=I(t)+B(t), \quad t \in \Delta \subset \mathbb{R}
 \]</div>
 <p>et on cherche la <strong>meilleure estimation</strong> de <span class="math notranslate nohighlight">\(I(t)\)</span> notée <span class="math notranslate nohighlight">\(\widehat{I}(t)\)</span> obtenue par filtrage linéaire de <span class="math notranslate nohighlight">\(X(t)\)</span>.</p>
-</section>
-<section id="expression-du-filtre">
+</div>
+<div class="section" id="expression-du-filtre">
 <h2><span class="section-number">5.3.2. </span>Expression du filtre<a class="headerlink" href="#expression-du-filtre" title="Permalink to this headline">#</a></h2>
 <p>D’après le principe de la projection orthogonale illustré sur la figure ci-dessous,</p>
 <img alt="filt_wiener" class="align-center" src="_images/figure_Wiener.png" />
@@ -572,8 +572,8 @@ E\left\{ \left[ \widehat{I}(t) X^{\ast} (u)\right]\right\} = \int h(t-v) R_X(v-u
 \[
 H(f)=\frac{s_I(f)}{s_X(f)} = \frac{s_I(f)}{s_I(f)+s_B(f)}
 \]</div>
-</section>
-<section id="id1">
+</div>
+<div class="section" id="id1">
 <h2><span class="section-number">5.3.3. </span>Expression du filtre<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <p>L’erreur d’estimation entre <span class="math notranslate nohighlight">\(I(t)\)</span> et <span class="math notranslate nohighlight">\( \widehat{I}(t)\)</span> possède une expression très simple qui est définie par</p>
 <div class="math notranslate nohighlight">
@@ -612,15 +612,15 @@ I^{\ast}(t) \right] \cr
 <li><p>l’erreur est nulle lorsqu’il n’y a pas de bruit (i.e., lorsque <span class="math notranslate nohighlight">\(s_b(f)=0\)</span>)</p></li>
 <li><p>l’erreur est nulle lorsque les DSP du signal et du bruit ont des supports disjoints  (ce qui implique <span class="math notranslate nohighlight">\(s_I(f)s_B(f)=0\)</span>)</p></li>
 </ul>
-</section>
-<section id="applications">
+</div>
+<div class="section" id="applications">
 <h2><span class="section-number">5.3.4. </span>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">#</a></h2>
 <p>Une application classique du filtre de Wiener est le débruitage d’images. Quelques résultats obtenus avec cette méthode sont présentés dans les images ci-dessous. Pour plus de détails concernant le filtre de Wiener, le lecteur pourra consulter l’ouvrage de Zaknich <span id="id2">[<a class="reference internal" href="biblio.html#id8" title="A. Zaknich. Principles of Adaptive Filters and Self-Learning Systems. Springer, London, 2005.">Zaknich, 2005</a>]</span>.</p>
 <img alt="original_image" class="align-center" src="_images/original_image.png" />
 <img alt="noisy_image" class="align-center" src="_images/noisy_image.png" />
 <img alt="denoised_image" class="align-center" src="_images/denoised_image.png" />
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -672,7 +672,7 @@ I^{\ast}(t) \right] \cr
   
     By J-Y. Tourneret et C. Poulliat<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2021.<br/>
 </p>
         </footer>
     </div>

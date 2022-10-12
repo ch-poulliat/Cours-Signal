@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3.3. Filtrage des signaux aléatoires &#8212; Traitement du Signal - Signaux et Systèmes Continus</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -30,32 +29,33 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/mystyle-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="4. Traitements non-linéaires" href="ch4intro.html" />
@@ -531,20 +531,20 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="filtrage-des-signaux-aleatoires">
+  <div class="section" id="filtrage-des-signaux-aleatoires">
 <h1><span class="section-number">3.3. </span>Filtrage des signaux aléatoires<a class="headerlink" href="#filtrage-des-signaux-aleatoires" title="Permalink to this headline">#</a></h1>
-<section id="definition">
+<div class="section" id="definition">
 <h2><span class="section-number">3.3.1. </span>Définition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 3.1 </span></p>
-<section class="definition-content" id="proof-content">
+<div class="definition-content section" id="proof-content">
 <p>Le filtrage des signaux aléatoires stationnaires est défini par une opération de convolution</p>
 <div class="math notranslate nohighlight">
 \[y(t)=x(t)*h(t)= \int_{\mathbb{R}} x(s) h(t-s) ds = \int_{\mathbb{R}} h(s) x(t-s) ds = h(t)*x(t).\]</div>
 <p>où les intégrales sont définies au sens de la **convergence en moyenne quadratique</p>
-</section>
-</div></section>
-<section id="identification-d-une-operation-de-filtrage-lineaire-pour-les-signaux-aleatoires">
+</div>
+</div></div>
+<div class="section" id="identification-d-une-operation-de-filtrage-lineaire-pour-les-signaux-aleatoires">
 <h2><span class="section-number">3.3.2. </span>Identification d’une opération de filtrage linéaire pour les signaux aléatoires<a class="headerlink" href="#identification-d-une-operation-de-filtrage-lineaire-pour-les-signaux-aleatoires" title="Permalink to this headline">#</a></h2>
 <p>Pour identifier une opération de filtrage linéaire, on peut utiliser le fait qu’il existe une <strong>isométrie</strong> entre l’ensemble des signaux aléatoires engendrés par un processus aléatoire stationnaire <span class="math notranslate nohighlight">\(x(t)\)</span> (i.e., l’ensemble des combinaisons linéaires de la forme <span class="math notranslate nohighlight">\(\sum_{k=1}^N a_k x(t_k)\)</span> et des limites des suites de variables aléatoires ayant cette forme notées <span class="math notranslate nohighlight">\(\lim\limits_{n \to +\infty}  \sum_{k_n=1}^{N_n} a_{k_n} x(t_{k_n})\)</span>) et l’ensemble des fonctions à valeurs complexes engendrées par <span class="math notranslate nohighlight">\(\exp(j2 \pi ft)\)</span> (i.e., l’ensemble des combinaisons linéaires de la forme <span class="math notranslate nohighlight">\(\sum_{k=1}^N a_k \exp(2 \pi f t_k)\)</span> et des limites des suites de
 variables aléatoires ayant cette forme notées <span class="math notranslate nohighlight">\(\lim\limits_{n \to +\infty}  \sum_{k_n=1}^{N_n} a_{k_n} \exp(2 \pi f t_{k_n})\)</span>).
@@ -570,20 +570,20 @@ L’espace des signaux aléatoires engendré par <span class="math notranslate n
 </div>
 <p>Ce résultat peut également s’expliquer à l’aide de la notion de <strong>réponse harmonique</strong> : si on met un signal de fréquence <span class="math notranslate nohighlight">\(f_0\)</span> à
 l’entrée d’un filtre, i.e., <span class="math notranslate nohighlight">\(x(t)=\exp( 2 \pi f_0 t)\)</span>, la sortie du filtre est également une fréquence pure mais dont l’amplitude est la phase ont été modifiées par le filtre, i.e., <span class="math notranslate nohighlight">\(y(t)=H(f_0) \exp( 2 \pi f_0 t)\)</span>.</p>
-</section>
-<section id="exemples">
+</div>
+<div class="section" id="exemples">
 <h2><span class="section-number">3.3.3. </span>Exemples<a class="headerlink" href="#exemples" title="Permalink to this headline">#</a></h2>
 <div class="proof example admonition" id="example-1">
 <p class="admonition-title"><span class="caption-number">Example 3.1 </span> (Filtre dérivateur. )</p>
-<section class="example-content" id="proof-content">
+<div class="example-content section" id="proof-content">
 <p>Soit le système défini par <span class="math notranslate nohighlight">\(y(t)=x'(t)\)</span> tel que</p>
 <div class="math notranslate nohighlight">
 \[x'(t)=\lim\limits_{h \to 0} \frac{x(t+h)-x(t)}{h} \leftrightarrow \lim\limits_{h \to 0} \frac{\exp(j2 \pi f(t+h))-\exp(j 2 \pi ft)}{h}=(j2\pi f) \exp(j2 \pi ft).\]</div>
 <p>Comme <span class="math notranslate nohighlight">\(H(f)=j2\pi f\)</span> est indépendant de <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(y(t)=x'(t)\)</span> est la sortie d’un filtre linéaire de transmittance <span class="math notranslate nohighlight">\(H(f)=j2 \pi f\)</span> (appelé filtre dérivateur.</p>
-</section>
+</div>
 </div><div class="proof example admonition" id="example-2">
 <p class="admonition-title"><span class="caption-number">Example 3.2 </span> (Filtre multi-trajets. )</p>
-<section class="example-content" id="proof-content">
+<div class="example-content section" id="proof-content">
 <p>On considère le système défini par l’équation d’observation suivante :</p>
 <div class="math notranslate nohighlight">
 \[y(t)=\sum_{k=1}^K a_k x(t-t_k).\]</div>
@@ -592,10 +592,10 @@ l’entrée d’un filtre, i.e., <span class="math notranslate nohighlight">\(x(
 \[y(t) \leftrightarrow \sum_{k=1}^K a_k \exp(j 2 \pi f(t-t_k)) = \exp( 2 \pi f t) \sum_{k=1}^K a_k \exp(j2 \pi f t_k)\]</div>
 <p>Comme <span class="math notranslate nohighlight">\(H(f)=\sum_{k=1}^K a_k \exp(j2 \pi f t_k)\)</span> est indépendant de <span class="math notranslate nohighlight">\(t\)</span>, on a une opération de de filtrage linéaire avec un filtre de
 transmittance <span class="math notranslate nohighlight">\(H(f)\)</span> (appelé filtre multi-trajets).</p>
-</section>
+</div>
 </div><div class="proof example admonition" id="example-3">
 <p class="admonition-title"><span class="caption-number">Example 3.3 </span></p>
-<section class="example-content" id="proof-content">
+<div class="example-content section" id="proof-content">
 <p>On considère maintenant le système suivant :</p>
 <div class="math notranslate nohighlight">
 \[y(t)=x(t)m(t)\]</div>
@@ -604,9 +604,9 @@ transmittance <span class="math notranslate nohighlight">\(H(f)\)</span> (appel�
 \[x(t)m(t)  \leftrightarrow \exp(j2 \pi ft) m(t).\]</div>
 <p>La correspondance de <span class="math notranslate nohighlight">\(x(t)m(t)\)</span> ne peut pas s’écrire <span class="math notranslate nohighlight">\(\exp(j2 \pi ft)H(f)\)</span> car <span class="math notranslate nohighlight">\(m(t)\)</span> est une fonction de <span class="math notranslate nohighlight">\(t\)</span> (et pas de <span class="math notranslate nohighlight">\(f\)</span>)
 donc l’opération qui à <span class="math notranslate nohighlight">\(x(t)\)</span> associe <span class="math notranslate nohighlight">\(x(t)m(t)\)</span> n’est pas une opération de filtrage linéaire.</p>
-</section>
-</div></section>
-<section id="relations-de-wiener-lee">
+</div>
+</div></div>
+<div class="section" id="relations-de-wiener-lee">
 <h2><span class="section-number">3.3.4. </span>Relations de Wiener-Lee<a class="headerlink" href="#relations-de-wiener-lee" title="Permalink to this headline">#</a></h2>
 <p>Les relations de Wiener-Lee sont valables pour des signaux aléatoires stationnaires, comme le montre cette partie. On a alors les expressions suivantes :</p>
 <ul>
@@ -687,8 +687,8 @@ R_{y_1 y_2}(\tau)&amp;= E[ y_1(t) y_2^*(t-\tau)] \\
 </div>
 </li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -740,7 +740,7 @@ R_{y_1 y_2}(\tau)&amp;= E[ y_1(t) y_2^*(t-\tau)] \\
   
     By J-Y. Tourneret et C. Poulliat<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2021.<br/>
 </p>
         </footer>
     </div>

@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2.4. Signaux aléatoires stationnaires &#8212; Traitement du Signal - Signaux et Systèmes Continus</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -30,32 +29,33 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/mystyle-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="2.5. Propriétés de la fonction d’autocorrélation et de la densité spectrale" href="ch2sec5.html" />
@@ -511,9 +511,9 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="signaux-aleatoires-stationnaires">
+  <div class="section" id="signaux-aleatoires-stationnaires">
 <h1><span class="section-number">2.4. </span>Signaux aléatoires stationnaires<a class="headerlink" href="#signaux-aleatoires-stationnaires" title="Permalink to this headline">#</a></h1>
-<section id="definition">
+<div class="section" id="definition">
 <h2><span class="section-number">2.4.1. </span>Définition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
 <p>Une classe de signaux très utile pour les applications pratiques regroupe les signaux <strong>aléatoires stationnaires
 au sens large</strong> (appelés aussi <strong>stationnaires à l’ordre <span class="math notranslate nohighlight">\(2\)</span></strong>) (que nous appellerons par simplicité <strong>signaux stationnaires</strong>) vérifiant</p>
@@ -541,7 +541,7 @@ P=E[ |x(t)|^2] &lt; \infty
 <p>qui induit les définitions suivantes</p>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 2.9 </span></p>
-<section class="definition-content" id="proof-content">
+<div class="definition-content section" id="proof-content">
 <ul>
 <li><p><em><strong>Fonction d’autocorrélation :</strong></em></p>
 <div class="math notranslate nohighlight">
@@ -556,15 +556,15 @@ P=E[ |x(t)|^2] &lt; \infty
 \[s_x(f) = \textrm{TF}[R_x(\tau)] = \int_{\mathbb{R}} R_x(\tau) \exp \left(-j 2 \pi f \tau \right) d\tau.\]</div>
 </li>
 </ul>
-</section>
+</div>
 </div><p>Le spectre des signaux aléatoires stationnaires est donc naturellement défini par cette densité spectrale de puissance
 <span class="math notranslate nohighlight">\(s_x(f)=\textrm{TF}[R_x(\tau)]\)</span> avec <span class="math notranslate nohighlight">\(R_x(\tau)=\langle x(t), x(t-\tau) \rangle =E[  x(t)x^*(t-\tau)]\)</span>.</p>
-</section>
-<section id="exemples">
+</div>
+<div class="section" id="exemples">
 <h2><span class="section-number">2.4.2. </span>Exemples<a class="headerlink" href="#exemples" title="Permalink to this headline">#</a></h2>
 <div class="proof example admonition" id="example-1">
 <p class="admonition-title"><span class="caption-number">Example 2.3 </span> (Sinusoïde.)</p>
-<section class="example-content" id="proof-content">
+<div class="example-content section" id="proof-content">
 <div class="math notranslate nohighlight">
 \[x(t)= A \cos(2 \pi f_0 t + \theta)\]</div>
 <p><span class="math notranslate nohighlight">\(\theta\)</span> variable aléatoire uniforme sur <span class="math notranslate nohighlight">\([0, 2\pi]\)</span>.</p>
@@ -578,10 +578,10 @@ P=E[ |x(t)|^2] &lt; \infty
 \[s_x(f)=\frac{A^2}{4} \left[ \delta(f-f_0) + \delta(f+f_0)\right]\]</div>
 </li>
 </ul>
-</section>
+</div>
 </div><div class="proof example admonition" id="example-2">
 <p class="admonition-title"><span class="caption-number">Example 2.4 </span> (Bruit blanc. )</p>
-<section class="example-content" id="proof-content">
+<div class="example-content section" id="proof-content">
 <p>Un bruit blanc vérifie les propriétés suivantes :</p>
 <ul>
 <li><p><em>Fonction d’autocorrélation :</em></p>
@@ -593,9 +593,9 @@ P=E[ |x(t)|^2] &lt; \infty
 \[s_x(f)= \frac{N_0}{2}\]</div>
 </li>
 </ul>
-</section>
-</div></section>
-</section>
+</div>
+</div></div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -647,7 +647,7 @@ P=E[ |x(t)|^2] &lt; \infty
   
     By J-Y. Tourneret et C. Poulliat<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2021.<br/>
 </p>
         </footer>
     </div>

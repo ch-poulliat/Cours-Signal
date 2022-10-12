@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4.1. Cas des signaux déterministes - exemple du quadrateur &#8212; Traitement du Signal - Signaux et Systèmes Continus</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -30,32 +29,33 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/mystyle-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="4.2. Cas des signaux aléatoires" href="ch4sec2.html" />
@@ -511,7 +511,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="cas-des-signaux-deterministes-exemple-du-quadrateur">
+  <div class="section" id="cas-des-signaux-deterministes-exemple-du-quadrateur">
 <h1><span class="section-number">4.1. </span>Cas des signaux déterministes - exemple du quadrateur<a class="headerlink" href="#cas-des-signaux-deterministes-exemple-du-quadrateur" title="Permalink to this headline">#</a></h1>
 <p>Dans le cas déterministe,  la relation</p>
 <div class="math notranslate nohighlight">
@@ -519,7 +519,7 @@ title="Print to PDF"
 y(t)=g[x(t)]
 \]</div>
 <p>ne vérifiant pas l’axiomatique d’un FLID, on ne peut pas se contenter d’une caractérisation du système par sa réponse impulsionnelle. Pour déterminer le comportement de la sortie du système, il faut souvent calculer explicitement l’expression de la sortie en fonction de l’entrée dans le domaine temporel ou fréquentiel, selon la facilité à calculer dans l’un ou l’autre domaine. On est donc fortement dépendant de la forme explicite de l’opérateur non linéaire <span class="math notranslate nohighlight">\(g\)</span>.</p>
-<section id="propriete-generale">
+<div class="section" id="propriete-generale">
 <h2><span class="section-number">4.1.1. </span>Propriété générale<a class="headerlink" href="#propriete-generale" title="Permalink to this headline">#</a></h2>
 <p>Si l’on prend l’exemple du quadrateur, on a</p>
 <div class="math notranslate nohighlight">
@@ -539,8 +539,8 @@ Si on considère en entrée le signal <span class="math notranslate nohighlight"
   Y(f)=\frac{A^{2}}{2} \delta(f)+\frac{A^{2}}{4}\left[\delta\left(f-2 f_{0}\right)+\delta\left(f+2 f_{0}\right)\right].
   \]</div>
 <p>On voit alors la disparition de la fréquence <span class="math notranslate nohighlight">\(f_0\)</span> et l’apparition de la fréquence double <span class="math notranslate nohighlight">\(2f_0\)</span>.</p>
-</section>
-<section id="signal-sinus-cardinal">
+</div>
+<div class="section" id="signal-sinus-cardinal">
 <h2><span class="section-number">4.1.2. </span>Signal sinus cardinal<a class="headerlink" href="#signal-sinus-cardinal" title="Permalink to this headline">#</a></h2>
 <p>Si on considère le cas d’un signal de type sinus cardinal donné par <span class="math notranslate nohighlight">\(x(t)=f_{0} \text{sinc} \left(\pi f_{0} t\right)\)</span> (avec <span class="math notranslate nohighlight">\(\text{sinc}(x)=\frac{\sin(x)}{x}\)</span>) de transformée de Fourier <span class="math notranslate nohighlight">\(X(f)=\Pi_{f_0}(f),\)</span> alors on obtient</p>
 <div class="math notranslate nohighlight">
@@ -548,8 +548,8 @@ Si on considère en entrée le signal <span class="math notranslate nohighlight"
 Y(f) = f_0 \Lambda _{f_0}\left( f\right).
 \]</div>
 <p>On voit bien sur cet exemple que la bande fréquentielle du signal a été doublée!</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -601,7 +601,7 @@ Y(f) = f_0 \Lambda _{f_0}\left( f\right).
   
     By J-Y. Tourneret et C. Poulliat<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2021.<br/>
 </p>
         </footer>
     </div>

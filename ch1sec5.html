@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1.5. Formulaire et Tables des principales transformées de Fourier &#8212; Traitement du Signal - Signaux et Systèmes Continus</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -30,32 +29,34 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/mystyle-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script src="_static/tabs.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="2. Signaux déterministes et aléatoires" href="ch2intro.html" />
@@ -440,46 +441,12 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#proprietes-generales-t-f">
-   1.5.1. Propriétés générales T.F.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#formules-de-parseval">
-   1.5.2. Formules de Parseval
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#serie-de-fourier">
-   1.5.3. Série de Fourier
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
@@ -491,29 +458,6 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#proprietes-generales-t-f">
-   1.5.1. Propriétés générales T.F.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#formules-de-parseval">
-   1.5.2. Formules de Parseval
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#serie-de-fourier">
-   1.5.3. Série de Fourier
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -521,40 +465,50 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="formulaire-et-tables-des-principales-transformees-de-fourier">
+  <div class="section" id="formulaire-et-tables-des-principales-transformees-de-fourier">
 <h1><span class="section-number">1.5. </span>Formulaire et Tables des principales transformées de Fourier<a class="headerlink" href="#formulaire-et-tables-des-principales-transformees-de-fourier" title="Permalink to this headline">#</a></h1>
-<section id="proprietes-generales-t-f">
-<h2><span class="section-number">1.5.1. </span>Propriétés générales T.F.<a class="headerlink" href="#proprietes-generales-t-f" title="Permalink to this headline">#</a></h2>
-<div class="math notranslate nohighlight">
-\[ax(t)+by(t) \rightleftharpoons aX(f)+bY(f)\]</div>
-<div class="math notranslate nohighlight">
-\[x(t-t_{0}) \rightleftharpoons X(f)e^{-i 2 \pi f t_{0}}\]</div>
-<div class="math notranslate nohighlight">
-\[x(t)e^{+i 2 \pi f_{0} t} \rightleftharpoons X(f-f_{0})\]</div>
-<div class="math notranslate nohighlight">
-\[x^{\ast }(t)\rightleftharpoons X^{\ast}(-f)\]</div>
-<div class="math notranslate nohighlight">
-\[x(t) y(t)\rightleftharpoons X(f)\ast Y(f)\]</div>
-<div class="math notranslate nohighlight">
-\[x(t)\ast y(t) \rightleftharpoons X(f) Y(f)\]</div>
-<div class="math notranslate nohighlight">
-\[x(at+b) \rightleftharpoons \frac{1}{\left|a\right|}X\left(\frac{f}{a}\right) e^{i2\pi \frac{b}{a}f}\]</div>
-<div class="math notranslate nohighlight">
-\[\frac{dx^{(n)}(t)}{dt^{n}} \rightleftharpoons  \left( i2\pi f\right) ^{n}X(f)\]</div>
-<div class="math notranslate nohighlight">
-\[\left( -i2\pi t\right) ^{n}x(t) \rightleftharpoons \frac{dX^{(n)}(f)}{df^{n}}\]</div>
-</section>
-<section id="formules-de-parseval">
-<h2><span class="section-number">1.5.2. </span>Formules de Parseval<a class="headerlink" href="#formules-de-parseval" title="Permalink to this headline">#</a></h2>
-<div class="math notranslate nohighlight">
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Propriétés générales</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Formules Parseval</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">Série de Fourier</button><button aria-controls="panel-0-0-3" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-3" name="0-3" role="tab" tabindex="-1">Transformées</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+  ax(t)+by(t) &amp;   \rightleftharpoons  aX(f)+bY(f) \\
+  x(t-t_{0}) &amp;   \rightleftharpoons X(f)e^{-i 2 \pi f t_{0}} \\
+  x(t)e^{+i 2 \pi f_{0} t} &amp;   \rightleftharpoons X(f-f_{0}) \\
+  x^{\ast }(t)&amp;  \rightleftharpoons  X^{\ast}(-f) \\
+  x(t) y(t)&amp;   \rightleftharpoons   X(f)\ast Y(f) \\
+  x(t)\ast y(t) &amp;   \rightleftharpoons  X(f) Y(f) \\
+  x(at+b) &amp;   \rightleftharpoons  \frac{1}{\left|a\right|}X\left(\frac{f}{a}\right) e^{i2\pi \frac{b}{a}f} \\
+  \frac{dx^{(n)}(t)}{dt^{n}} &amp;   \rightleftharpoons  \left( i2\pi f\right) ^{n}X(f)  \\
+  \left( -i2\pi t\right)^{n}x(t) &amp;   \rightleftharpoons  \frac{dX^{(n)}(f)}{df^{n}}  
+\end{align*}\]</div>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="math notranslate nohighlight">
 \[\int_{\mathbb{R}}x(t)y^{\ast }(t)dt=\int_{\mathbb{R}}X(f)Y^{\ast }(f)df\]</div>
 <div class="math notranslate nohighlight">
 \[\int_{\mathbb{R}}\left| x(t)\right| ^{2}dt=\int_{\mathbb{R}}\left| X(f)\right| ^{2}df\]</div>
-</section>
-<section id="serie-de-fourier">
-<h2><span class="section-number">1.5.3. </span>Série de Fourier<a class="headerlink" href="#serie-de-fourier" title="Permalink to this headline">#</a></h2>
-<div class="math notranslate nohighlight">
+</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="math notranslate nohighlight">
 \[\underset{n\in \mathbb{Z}}{\sum }c_{n}e^{+i2\pi nf_{0}t}\rightleftharpoons \underset{n\in \mathbb{Z}}{\sum }c_{n}\delta \left( f- nf_{0}\right)\]</div>
+</div><div aria-labelledby="tab-0-0-3" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-3" name="0-3" role="tabpanel" tabindex="0"><div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+    \hline\\
+      1 &amp;   \rightleftharpoons  \delta \left( f \right)\\ 
+      \delta \left( t\right) &amp;   \rightleftharpoons  1 \\ 
+      e^{+i2\pi f_{0}t}&amp;   \rightleftharpoons \delta \left( f-f_{0}\right)\\ 
+     \delta \left( t-t_{0}\right) &amp;   \rightleftharpoons e^{-i2\pi ft_{0}} \\
+      \amalg \hspace{-0.3cm}\amalg _{T}\left( t\right)  &amp;  \rightleftharpoons \frac{1}{T}\amalg \hspace{-0.3cm}\amalg _{1/T}\left(f\right) \\
+      \cos \left( 2 \pi f_{0}t \right) &amp;   \rightleftharpoons \frac{1}{2}\left(\delta \left( f-f_{0}\right) +\delta \left( f+f_{0}\right) \right) \\ 
+      \sin \left( 2\pi f_{0}t\right) &amp;   \rightleftharpoons \frac{1}{2i}\left( \delta \left( f-f_{0}\right)-\delta \left( f+f_{0}\right) \right)\\ 
+      e^{-a\left| t\right| } &amp;   \rightleftharpoons \frac{2a}{a^{2}+4\pi ^{2}f^{2}} \\ 
+      e^{-\pi t^{2}} &amp;   \rightleftharpoons e^{-\pi f^{2}} \\ 
+      \Pi _{T} \left( t\right) &amp;   \rightleftharpoons T \mathrm{sinc}\left( \pi Tf\right) \\ 
+      \Lambda _{T}\left( t\right) &amp;   \rightleftharpoons T \mathrm{sinc}^{2}\left( \pi Tf\right) \\ 
+      B \mathrm{ sinc}\left( \pi Bt\right) &amp;   \rightleftharpoons \Pi _{B}\left( f\right) \\ 
+      B \mathrm{ sinc}^{2}\left( \pi Bt\right)  &amp;   \rightleftharpoons \Lambda _{B}\left( f\right) \\ 
+      \hline
+\end{align*}\]</div>
+<div class="math notranslate nohighlight">
+\[\amalg \hspace{-0.3cm}\amalg _{T}\left( t\right) = \underset{k\in \mathbb{Z}}{\sum } \delta \left( t-kT\right)\]</div>
+<div class="math notranslate nohighlight">
+\[\mathrm{sinc}\left( \pi Tf\right)=\frac{\sin \left( \pi Tf\right) }{\pi T f}\]</div>
+</div></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><span class="math notranslate nohighlight">\(\Pi _{T}\left( t\right)\)</span> note une fenêtre rectangulaire de support égal à <span class="math notranslate nohighlight">\(T\)</span>.</p>
@@ -563,8 +517,7 @@ title="Print to PDF"
 \[\Pi _{T}\left( t\right) \ast \Pi _{T}\left( t\right) =T~\Lambda _{T}\left(
 t\right)\]</div>
 </div>
-</section>
-</section>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -616,7 +569,7 @@ t\right)\]</div>
   
     By J-Y. Tourneret et C. Poulliat<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2021.<br/>
 </p>
         </footer>
     </div>

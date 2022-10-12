@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4.3. Quantification &#8212; Traitement du Signal - Signaux et Systèmes Continus</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -20,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -30,32 +29,33 @@
     <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/mystyle-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="5. Pour aller plus loin" href="ch5intro.html" />
@@ -464,7 +464,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="quantification">
+  <div class="section" id="quantification">
 <h1><span class="section-number">4.3. </span>Quantification<a class="headerlink" href="#quantification" title="Permalink to this headline">#</a></h1>
 <p>L’opération de quantification est l’opération qui consiste à représenter des échantillons d’un signal analogique (à priori à valeur dans <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>) par un signal qui peut prendre un ensemble fini de valeurs, la cardinalité de ce dernier étant liée au nombre de bits que l’on se donne pour représenter ce signal. Pour un signal suppose borné à valeurs dans l’intervalle <span class="math notranslate nohighlight">\([-A_{\max},A_{\max}],\)</span> on va partitionner cet intervalle en <span class="math notranslate nohighlight">\(N=2^b\)</span> intervalles distincts. Si le signal <span class="math notranslate nohighlight">\(x(t)\)</span> est à valeur dans l’un de ces intervalles, on lui  assignera une valeur dans cet intervalle qui servira de représentant, comme par exemple le milieu de l’intervalle. On peut alors représenter le signal de la façon suivante</p>
 <div class="math notranslate nohighlight">
@@ -507,7 +507,7 @@ x_Q(t)=x(t)+\epsilon{(t)}
 \]</div>
 <p>C’est la fameuse règle du “<span class="math notranslate nohighlight">\(6\)</span>dB par bit” qui permet de briller en société. Cette règle simple montre que chaque bit additionnel de quantification permet d’améliorer le rapport signal sur bruit de <span class="math notranslate nohighlight">\(6\)</span>dB. Cette règle simple et correspondant à un modèle simple permet cependant en pratique de bien capturer l’effet de la quantification.</p>
 <p>Ces résultats peuvent être généralisés à d’autres types de signaux <span class="math notranslate nohighlight">\(x(t)\)</span> comme les signaux gaussiens. On peut également considérer une quantification non uniforme, i.e., dont la taille des intervalles est dépendante de la distribution de l’amplitude du signal.</p>
-</section>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -559,7 +559,7 @@ x_Q(t)=x(t)+\epsilon{(t)}
   
     By J-Y. Tourneret et C. Poulliat<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2021.<br/>
 </p>
         </footer>
     </div>
