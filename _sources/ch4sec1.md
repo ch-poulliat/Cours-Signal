@@ -43,8 +43,7 @@ $$
 
 On voit bien sur cet exemple que la bande fréquentielle du signal a été doublée!
 
-```{admonition} admonition
-    :class: exercise
+```{exercise}
 
 Que se passe-t-il si on a plusieurs signaux cosinus à des fréquences différentes en entrée du quadrateur ?
 
