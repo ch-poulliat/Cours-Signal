@@ -24,7 +24,7 @@ $$
 
 On montre que si le support de $X(f)$ est $]-F_1, +F_1[$, alors celui de $Y(f)=X(f)*X(f)$ est inclu dans $]-2F_1,2F_1[$ et est en général égal à $]-2F_1,2F_1[$. L'effet d'un quadrateur est donc d'élargir le support fréquentiel du signal, ce qui dans des applications comme les télécommunications peut poser souci du point de vue système.
 
-\subsection{Signal sinusoidal}
+### Signal sinusoidal
 Si on considère en entrée le signal $x(t)=A \cos(2\pi f_0t),$ un simple calcul de la transformée de Fourier de $y(t)=x^2(t)$ nous donne
 
   $$
@@ -43,7 +43,7 @@ $$
 
 On voit bien sur cet exemple que la bande fréquentielle du signal a été doublée!
 
-```{exercice}
+```{exercise}
 
 Que se passe-t-il si on a plusieurs signaux cosinus à des fréquences différentes en entrée du quadrateur ?
 ```

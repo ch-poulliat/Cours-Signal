@@ -1,10 +1,10 @@
 ## Produit de convolution
 
+
 ### Définition
 
 ```{prf:definition} Produit de Convolution
 :label: pdtconv
-
 
 Le produit de convolution est défini (quand il existe) par
 
@@ -12,6 +12,7 @@ $$
 y(t)=(h * x)(t)=h(t)*x(t)=\int_{-\infty}^{\infty} x(\tau) h(t-\tau) d \tau=\int_{-\infty}^{\infty} x(t-\tau) h(\tau) d \tau
 $$
 ```
+
 ### Propriétés
 
 -   <span style="color:rgba(var(--pst-color-link),1)"> ***Commutativité :***</span>
