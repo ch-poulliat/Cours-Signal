@@ -40,6 +40,7 @@
     <link rel="stylesheet" type="text/css" href="_static/C:\ProgramData\Anaconda3\envs\Python39\Lib\site-packages\sphinxcontrib\icon\node_modules\@fortawesome\fontawesome-free\css\all.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="_static/.ipynb_checkpoints/mystyle-checkpoint.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
@@ -383,7 +384,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -399,6 +402,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-school-viewbox-0-0-24-24-aria-hidden-true-path-d-m0-0h24v24h0z-fill-none-path-path-d-m5-13-18v4l12-21l7-3-82v-4l12-17l-7-3-82zm12-3l1-9l11-6-9-4-91v17h2v9l12-3z-path-svg-sommaire"><svg aria-hidden="true" class="sd-material-icon sd-material-icon-school" height="1.0em" version="4.0.0.63c5cb3" viewbox="0 0 24 24" width="1.0em"><path d="M0 0h24v24H0z" fill="none"></path><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg> Sommaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-download-viewbox-0-0-24-24-aria-hidden-true-g-rect-fill-none-height-24-width-24-rect-g-g-path-d-m5-20h14v-2h5v20z-m19-9h-4v3h9v6h5l7-7l19-9z-path-g-svg-ressources"><svg aria-hidden="true" class="sd-material-icon sd-material-icon-download" height="1.0em" version="4.0.0.63c5cb3" viewbox="0 0 24 24" width="1.0em"><g><rect fill="none" height="24" width="24"></rect></g><g><path d="M5,20h14v-2H5V20z M19,9h-4V3H9v6H5l7,7L19,9z"></path></g></svg> Ressources</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -411,6 +423,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="bienvenue-au-cours-de-traitement-du-signal">
 <h1>Bienvenue au cours de Traitement du Signal<a class="headerlink" href="#bienvenue-au-cours-de-traitement-du-signal" title="Permalink to this heading">#</a></h1>
 <p>Vous trouverez ici une version en ligne du polycopié <em>Traitement du Signal - Signaux et Systèmes continus</em> qui sera à terme augmentée d’exemples et de codes associés pour vous familiariser à Matlab ou aux librairies Python utiles à cette discipline.</p>
+<section id="svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-school-viewbox-0-0-24-24-aria-hidden-true-path-d-m0-0h24v24h0z-fill-none-path-path-d-m5-13-18v4l12-21l7-3-82v-4l12-17l-7-3-82zm12-3l1-9l11-6-9-4-91v17h2v9l12-3z-path-svg-sommaire">
+<h2><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-school" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"></path><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg> Sommaire<a class="headerlink" href="#svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-school-viewbox-0-0-24-24-aria-hidden-true-path-d-m0-0h24v24h0z-fill-none-path-path-d-m5-13-18v4l12-21l7-3-82v-4l12-17l-7-3-82zm12-3l1-9l11-6-9-4-91v17h2v9l12-3z-path-svg-sommaire" title="Permalink to this heading">#</a></h2>
 <p>Le cours s’articule autour des chapitres suivants :</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -422,9 +436,14 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="biblio.html">6. <i class="fa-solid fa-book-open"></i> Bibliographie</a></li>
 </ul>
 </div>
-<p>Le polycopié de cours est disponible ici <a class="reference download internal" download="" href="_downloads/9599b8885ec413750295253d1bc2f53d/PolyTS-2022.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Polycopié</span> <span class="pre">1SN</span> <span class="pre">Traitement</span> <span class="pre">du</span> <span class="pre">Signal</span> <span class="pre">-</span> <span class="pre">Partie</span> <span class="pre">I</span></code></a></p>
-<p>Les diapositives du cours sont disponibles ici <a class="reference download internal" download="" href="_downloads/c7d9a9510b099ef614e64983499a9855/slidesTS1SN_20222023.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Diapositives</span> <span class="pre">1SN</span> <span class="pre">Traitement</span> <span class="pre">du</span> <span class="pre">Signal</span> <span class="pre">-</span> <span class="pre">Partie</span> <span class="pre">I</span></code></a></p>
-<p>Le polycopié d’exercices commun aux deux parties du cours est disponible ici <a class="reference download internal" download="" href="_downloads/800b97480ea3792b6b2090c43830914e/PolyTS-exercice-2022.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Polycopié</span> <span class="pre">1SN</span> <span class="pre">Traitement</span> <span class="pre">du</span> <span class="pre">Signal</span> <span class="pre">-</span> <span class="pre">Exercices</span> <span class="pre">et</span> <span class="pre">problèmes</span> <span class="pre">résolus</span></code></a></p>
+</section>
+<section id="svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-download-viewbox-0-0-24-24-aria-hidden-true-g-rect-fill-none-height-24-width-24-rect-g-g-path-d-m5-20h14v-2h5v20z-m19-9h-4v3h9v6h5l7-7l19-9z-path-g-svg-ressources">
+<h2><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-download" viewBox="0 0 24 24" aria-hidden="true"><g><rect fill="none" height="24" width="24"></rect></g><g><path d="M5,20h14v-2H5V20z M19,9h-4V3H9v6H5l7,7L19,9z"></path></g></svg> Ressources<a class="headerlink" href="#svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-download-viewbox-0-0-24-24-aria-hidden-true-g-rect-fill-none-height-24-width-24-rect-g-g-path-d-m5-20h14v-2h5v20z-m19-9h-4v3h9v6h5l7-7l19-9z-path-g-svg-ressources" title="Permalink to this heading">#</a></h2>
+<p><i class="fas fa-file-pdf" style="color: red;"></i> Le polycopié de cours est disponible ici  <a class="reference download internal" download="" href="_downloads/9599b8885ec413750295253d1bc2f53d/PolyTS-2022.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Polycopié</span> <span class="pre">1SN</span> <span class="pre">Traitement</span> <span class="pre">du</span> <span class="pre">Signal</span> <span class="pre">-</span> <span class="pre">Partie</span> <span class="pre">I</span></code></a></p>
+<p><i class="fas fa-file-pdf" style="color: red;"></i> Les diapositives du cours sont disponibles ici   <a class="reference download internal" download="" href="_downloads/c7d9a9510b099ef614e64983499a9855/slidesTS1SN_20222023.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Diapositives</span> <span class="pre">1SN</span> <span class="pre">Traitement</span> <span class="pre">du</span> <span class="pre">Signal</span> <span class="pre">-</span> <span class="pre">Partie</span> <span class="pre">I</span></code></a></p>
+<p><i class="fas fa-file-pdf" style="color: red;"></i> Le polycopié d’exercices commun aux deux parties du cours est disponible ici  <a class="reference download internal" download="" href="_downloads/800b97480ea3792b6b2090c43830914e/PolyTS-exercice-2022.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Polycopié</span> <span class="pre">1SN</span> <span class="pre">Traitement</span> <span class="pre">du</span> <span class="pre">Signal</span> <span class="pre">-</span> <span class="pre">Exercices</span> <span class="pre">et</span> <span class="pre">problèmes</span> <span class="pre">résolus</span></code></a></p>
+<p><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-slideshow" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0V0z" fill="none"></path><path d="M10 9.04v5.92c0 .42.48.65.81.39l3.7-2.96c.25-.2.25-.58 0-.78l-3.7-2.96c-.33-.26-.81-.03-.81.39zM19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1z"></path></svg> Les diapositives du cours en version html (Format reveal.js) sont consultables ici <a href="https://ch-poulliat.github.io/Cours-Signal-Part-I/slides/Slides.html"> Traitement du Signal</a>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -472,6 +491,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-school-viewbox-0-0-24-24-aria-hidden-true-path-d-m0-0h24v24h0z-fill-none-path-path-d-m5-13-18v4l12-21l7-3-82v-4l12-17l-7-3-82zm12-3l1-9l11-6-9-4-91v17h2v9l12-3z-path-svg-sommaire"><svg aria-hidden="true" class="sd-material-icon sd-material-icon-school" height="1.0em" version="4.0.0.63c5cb3" viewbox="0 0 24 24" width="1.0em"><path d="M0 0h24v24H0z" fill="none"></path><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg> Sommaire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#svg-version-4-0-0-63c5cb3-width-1-0em-height-1-0em-class-sd-material-icon-sd-material-icon-download-viewbox-0-0-24-24-aria-hidden-true-g-rect-fill-none-height-24-width-24-rect-g-g-path-d-m5-20h14v-2h5v20z-m19-9h-4v3h9v6h5l7-7l19-9z-path-g-svg-ressources"><svg aria-hidden="true" class="sd-material-icon sd-material-icon-download" height="1.0em" version="4.0.0.63c5cb3" viewbox="0 0 24 24" width="1.0em"><g><rect fill="none" height="24" width="24"></rect></g><g><path d="M5,20h14v-2H5V20z M19,9h-4V3H9v6H5l7,7L19,9z"></path></g></svg> Ressources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

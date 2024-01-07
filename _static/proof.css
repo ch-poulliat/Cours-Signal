@@ -19,14 +19,12 @@
 *********************************************/
 
 /* Remove content box */
-div.proof p.admonition-title::before {
+div.proof p.admonition-title:before {
 	content: none;
 }
-
-div.proof p.admonition-title::after {
+div.proof p.admonition-title:after {
 	content: none;
 }
-
 /*********************************************
 * Proof *
 *********************************************/
