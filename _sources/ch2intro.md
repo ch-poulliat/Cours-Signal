@@ -1,4 +1,4 @@
-# Signaux déterministes et aléatoires
+# <i class="fas fa-book fa-fw"></i> Signaux déterministes et aléatoires
 
 On s'intéresse dans cette partie à décrire différentes classes de
 signaux à temps continu notés par exemple $x(t)$, $y(t)$ \... qui

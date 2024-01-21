@@ -4,7 +4,7 @@
 
 ```{tab} Propriétés générales
 
-\begin{align*} 
+$$\begin{aligned} 
   ax(t)+by(t) &   \rightleftharpoons  aX(f)+bY(f) \\
   x(t-t_{0}) &   \rightleftharpoons X(f)e^{-i 2 \pi f t_{0}} \\
   x(t)e^{+i 2 \pi f_{0} t} &   \rightleftharpoons X(f-f_{0}) \\
@@ -14,7 +14,7 @@
   x(at+b) &   \rightleftharpoons  \frac{1}{\left|a\right|}X\left(\frac{f}{a}\right) e^{i2\pi \frac{b}{a}f} \\
   \frac{dx^{(n)}(t)}{dt^{n}} &   \rightleftharpoons  \left( i2\pi f\right) ^{n}X(f)  \\
   \left( -i2\pi t\right)^{n}x(t) &   \rightleftharpoons  \frac{dX^{(n)}(f)}{df^{n}}  
-\end{align*} 
+\end{aligned}$$ 
 ```
 
 ```{tab} Formules Parseval
@@ -33,7 +33,7 @@ $$\int_{\mathbb{R}}\left| x(t)\right| ^{2}dt=\int_{\mathbb{R}}\left| X(f)\right|
 ```{tab} Transformées
 
 
-\begin{align*}
+$$\begin{aligned}
     \hline\\
       1 &   \rightleftharpoons  \delta \left( f \right)\\ 
       \delta \left( t\right) &   \rightleftharpoons  1 \\ 
@@ -49,7 +49,7 @@ $$\int_{\mathbb{R}}\left| x(t)\right| ^{2}dt=\int_{\mathbb{R}}\left| X(f)\right|
       B \mathrm{ sinc}\left( \pi Bt\right) &   \rightleftharpoons \Pi _{B}\left( f\right) \\ 
       B \mathrm{ sinc}^{2}\left( \pi Bt\right)  &   \rightleftharpoons \Lambda _{B}\left( f\right) \\ 
       \hline
-\end{align*}
+\end{aligned}$$
 
 
 $$\amalg \hspace{-0.3cm}\amalg _{T}\left( t\right) = \underset{k\in \mathbb{Z}}{\sum } \delta \left( t-kT\right)$$

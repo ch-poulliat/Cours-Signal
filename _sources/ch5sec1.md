@@ -43,7 +43,7 @@ $$
 X(t)=A\cos \left( 2\pi f_{0}t+\theta \right) 
 $$
 
-avec $A=220 \sqrt{2}$, $f_{0}=50Hz$ et $\theta $ uniformément répartie sur $\left] 0,2\pi \right[$. Nous savons que le signal $X(t)$ est de moyenne nulle $E[X(t)]=0$ et de fonction d'autocorrélation $E[X(t)X(t-\tau)=\frac{A^2}{2} \cos \left( 2\pi f_{0} \tau \right)$. Le signal $X(t)$ est donc ergodique au premier ordre si
+avec A=2202, f0=50Hz et θ uniformément répartie sur ]0,2π[. Nous savons que le signal X(t) est de moyenne nulle E[X(t)]=0 et de fonction d'autocorrélation E[X(t)X(t−τ)=A22cos⁡(2πf0τ). Le signal X(t) est donc ergodique au premier ordre si
 
 $$
 Y_{T}=\frac{1}{T}\int_{0}^{T}X(u)du \overset{\textrm{mq}}{\underset{T\to +\infty}{\longrightarrow}} 0.
@@ -53,8 +53,8 @@ Mais
 
 $$
 \begin{split}
-Y_{T}&= \frac{1}{T}\int_{0}^{T} A \cos \left( 2\pi f_{0}u+\theta \right) du  \\
-&=  \left[ \frac{A \sin \left( 2\pi f_{0}u+\theta \right)} {2 \pi f_0} \right]_{u=0}^{u=T} \\
+Y_{T}&= \frac{1}{T}\int_{0}^{T} A \cos \left( 2\pi f_{0}u+\theta \right) du  \
+&=  \left[ \frac{A \sin \left( 2\pi f_{0}u+\theta \right)} {2 \pi f_0} \right]_{u=0}^{u=T} \
 &= \frac{A \sin \left( 2\pi f_{0}T+\theta \right) -A\sin (\theta)} {2 \pi f_0 T} .\label{YT}
  \end{split}
 $$
@@ -71,19 +71,19 @@ $$
 E\left[ (Y_T-m)^2\right] = E\left[ Y_T^2\right] \le \frac{A^2}{\pi^2 f_0^2 T^2}  \;  {\underset{T\to +\infty}{\longrightarrow}} 0.
 $$
  
-ce qui prouve que le signal $X(t)$ est **ergodique au premier ordre**.
+ce qui prouve que le signal X(t) est **ergodique au premier ordre**.
 ```
 
 ```{prf:example} Le carré du secteur
 
 \begin{eqnarray}
-X(t) &=&A \cos ^{2}\left( 2\pi f_{0}t+\theta \right)  \\
+X(t) &=&A \cos ^{2}\left( 2\pi f_{0}t+\theta \right)  \
 &=&A \left[ \frac{1}{2}+\frac{1}{2}\cos \left( 4\pi f_{0}t+2\theta
 \right) \right] 
 \end{eqnarray}
 
-où $\theta $ est une variable aléatoire uniformément répartie sur $\left] 0,2\pi \right[ $ et $A$ une variable aléatoire de
-moyenne $m_A$ et de variance $\sigma_A^{2}>0$ indépendante de $\theta$. La moyenne de $X(t)$ est alors
+où θ est une variable aléatoire uniformément répartie sur ]0,2π[ et A une variable aléatoire de
+moyenne mA et de variance σA2>0 indépendante de θ. La moyenne de X(t) est alors
 
 $$
 E[X(t)] = m = \frac{m_A}{2}.
@@ -94,8 +94,8 @@ Par ailleurs
 $$
 \begin{split}
 Y_{T}&= \frac{A}{2T}\int_{0}^{T} \left[ 1+\cos \left( 4\pi f_{0}u+2\theta
-\right) \right]du   \\
-&=  \frac{A}{2} +  \frac{A}{2T}  \left[ \frac{\sin \left( 4\pi f_{0}u+2\theta \right)} {4 \pi f_0 } \right]_{u=0}^{u=T} \\
+\right) \right]du   \
+&=  \frac{A}{2} +  \frac{A}{2T}  \left[ \frac{\sin \left( 4\pi f_{0}u+2\theta \right)} {4 \pi f_0 } \right]_{u=0}^{u=T} \
 &= \frac{A}{2} +  \frac{A}{2T}  \left[ \frac{\sin \left( 4\pi f_{0}T+2\theta \right) - \sin \left( 2\theta \right)} {4 \pi f_0} \right]. \label{Y2T}
  \end{split}
 $$
@@ -106,7 +106,7 @@ $$
  Y_{T} \overset{\textrm{mq}}{\underset{T\to +\infty}{\longrightarrow}} \frac{A}{2} \neq E[X(t)] = \frac{m_A}{2}.
 $$
 
-ce qui prouve que le signal $X(t)$ **n'est pas ergodique au premier ordre**.
+ce qui prouve que le signal X(t) **n'est pas ergodique au premier ordre**.
 ```
 
 ```{prf:example} Autres exemples
@@ -117,7 +117,7 @@ $$
 X(t)=V 
 $$
 
-avec $V$ variable aléatoire uniforme sur $]0, V_0[$ (avec par exemple $V_0=10$ volts).
+avec V variable aléatoire uniforme sur ]0,V0[ (avec par exemple V0=10 volts).
 
 - ***Modulation du secteur***
 
@@ -125,14 +125,14 @@ $$
 Z(t)=X(t) \exp \left( -j2 \pi f_0 t \right)
 $$
 
-avec $X(t)=A\cos \left( 2\pi f_{0}t+\theta \right)$ le secteur défini ci-dessus.
+avec X(t)=Acos⁡(2πf0t+θ) le secteur défini ci-dessus.
 ```
 
 ### Théorème
 
 ```{prf:theorem}
 
-Pour un processus aléatoire stationnaire au sens large $X(t)$ de moyenne $E\left[ X(t)\right] =m$, de fonction d'autocorrélation 
+Pour un processus aléatoire stationnaire au sens large X(t) de moyenne E[X(t)]=m, de fonction d'autocorrélation 
 
 $$
 R_X\left( \tau \right) =E\left[ X(t)X^{\ast }\left( t-\tau \right) \right]
@@ -150,7 +150,7 @@ Y_{T}=\frac{1}{T}\int_{0}^{T}X(u)du \overset{\textrm{mq}}{\underset{T\to +\infty
 m\right| ^{2}
 $$
 
-avec $\Delta S_X\left( 0\right) =S_X\left( 0^{+}\right) -S_X\left( 0^{-}\right)$ et $s_X\left( f\right) =\frac{dS_X(f)}{df}$.
+avec ΔSX(0)=SX(0+)−SX(0−) et sX(f)=dSX(f)df.
 ```
 
 ```{prf:proof}
@@ -168,37 +168,37 @@ $$
 E\left[ Y_{T}Y_{T}^{\ast }\right] =\Delta S_X\left( 0\right).
 $$
 
-Par utilisation de l'isométrie fondamentale $X(t)\leftrightarrow e^{j2\pi ft}$, on a 
+Par utilisation de l'isométrie fondamentale X(t)↔ej2πft, on a 
 
 $$
 \begin{split}
 E\left[ Y_{T}Y_{T}^{\ast }\right]  &=\int_{\Bbb{R}}\left| \frac{e^{j2\pi
-ft}-1}{j2\pi fT}\right| ^{2}s_X(f)df \\
-&=\int_{-\infty }^{-\frac{1}{\sqrt{T}}}+\int_{-\frac{1}{\sqrt{T}}}^{\frac{1}{\sqrt{T}}}+\int_{\frac{1}{\sqrt{T}}}^{+\infty }\left| \frac{e^{j2\pi fT}-1}{j2\pi fT}\right| ^{2}s_X(f)df \\
+ft}-1}{j2\pi fT}\right| ^{2}s_X(f)df \
+&=\int_{-\infty }^{-\frac{1}{\sqrt{T}}}+\int_{-\frac{1}{\sqrt{T}}}^{\frac{1}{\sqrt{T}}}+\int_{\frac{1}{\sqrt{T}}}^{+\infty }\left| \frac{e^{j2\pi fT}-1}{j2\pi fT}\right| ^{2}s_X(f)df \
 &=I_{1}+I_{2}+I_{3}
 \end{split}
 $$
 
 On exprime alors les trois intégrales comme suit 
 
-- **Intégrale $\mathbf{I}_{3}$**
+- **Intégrale I3**
 
 $$
 \begin{split}
-I_{3} &=\int_{\frac{1}{\sqrt{T}}}^{+\infty }\left| \frac{e^{j2\pi fT}-1}{j2\pi fT}\right| ^{2}s_X(f)df \\
-&\leq \int_{\frac{1}{\sqrt{T}}}^{+\infty }\frac{4}{4\pi ^{2}f^{2}T^{2}} s_X(f)df \\
-&\leq \frac{1}{\pi ^{2}T}\int_{\frac{1}{\sqrt{T}}}^{+\infty }s_X(f)df \\
+I_{3} &=\int_{\frac{1}{\sqrt{T}}}^{+\infty }\left| \frac{e^{j2\pi fT}-1}{j2\pi fT}\right| ^{2}s_X(f)df \
+&\leq \int_{\frac{1}{\sqrt{T}}}^{+\infty }\frac{4}{4\pi ^{2}f^{2}T^{2}} s_X(f)df \
+&\leq \frac{1}{\pi ^{2}T}\int_{\frac{1}{\sqrt{T}}}^{+\infty }s_X(f)df \
 &\leq \frac{R_X\left( 0\right) }{\pi ^{2}T} \overset{}{\underset{T\to +\infty}{\longrightarrow}} 0
 \end{split}
 $$
 
-où $R_X(\tau)$ est la fonction d'autocorrélation du signal $X(t)$.
+où RX(τ) est la fonction d'autocorrélation du signal X(t).
 
-- **Intégrale $\mathbf{I}_{1}$**
+- **Intégrale I1**
 
-Résultat similaire après changement de variables $u=-f$.
+Résultat similaire après changement de variables u=−f.
 
-- **Intégrale $\mathbf{I}_{2}$**
+- **Intégrale I2**
 
 $$
 I_{2}=\int_{-\frac{1}{\sqrt{T}}}^{\frac{1}{\sqrt{T}}}\left| \frac{e^{j2\pi
@@ -210,28 +210,28 @@ On pose
 $$
 \widetilde{S}_X\left( f\right) =\left\{ 
 \begin{array}{c}
-S_X(f)\qquad f<0 \\ 
+S_X(f)\qquad f<0 \ 
 S_X\left( f\right) -\Delta S_X\left( 0\right) \qquad f\geq 0
 \end{array}
 \right. 
 $$
 
-Par construction, en notant $U(f)$ l'échelon de Heaviside, la fonction $\widetilde{S}_X\left( f\right) =S_X\left( f\right) -\Delta
-S_X\left( 0\right) U(f)$ est continue en $f=0$. Alors : 
+Par construction, en notant U(f) l'échelon de Heaviside, la fonction $\widetilde{S}_X\left( f\right) =S_X\left( f\right) -\Delta
+S_X\left( 0\right) U(f)estcontinueenf=0$. Alors : 
 
 $$
 \begin{split}
-I_{2} &= \int_{-\frac{1}{\sqrt{T}}}^{\frac{1}{\sqrt{T}}}\left| \frac{e^{j2\pi fT}-1}{j2\pi fT}\right| ^{2}dS_X(f) \\
+I_{2} &= \int_{-\frac{1}{\sqrt{T}}}^{\frac{1}{\sqrt{T}}}\left| \frac{e^{j2\pi fT}-1}{j2\pi fT}\right| ^{2}dS_X(f) \
 &=\Delta S_X\left( 0\right) +\int_{-\frac{1}{\sqrt{T}}}^{\frac{1}{\sqrt{T}}}\left| \frac{e^{j2\pi fT}-1}{j2\pi fT}\right|^{2}d\widetilde{S}_X(f)
 \end{split}
 $$
 
-Puisque pour $x>0$, on a
+Puisque pour x>0, on a
 
 $$
 \begin{array}{c}
 \left| \int_{0}^{x}e^{iu}du\right| &\leq &\int_{0}^{x}\left| e^{iu}\right|
-du=x \\
+du=x \
 \left| e^{ix}-1\right| &\leq &x,
 \end{array}
 $$
@@ -241,13 +241,13 @@ on en déduit
 $$
 \begin{split}
 I_{2}-\Delta S_X\left( 0\right) &=\int_{-\frac{1}{\sqrt{T}}}^{\frac{1}{\sqrt{T
-}}}\left| \frac{e^{j2\pi fT}-1}{j2\pi fT}\right| ^{2}d\widetilde{S}_X(f) \\
+}}}\left| \frac{e^{j2\pi fT}-1}{j2\pi fT}\right| ^{2}d\widetilde{S}_X(f) \
 &\leq \int_{-\frac{1}{\sqrt{T}}}^{\frac{1}{\sqrt{T}}}d\widetilde{S}_X(f)=
 \widetilde{S}_X\left(\tfrac{1}{\sqrt{T}}\right)-\widetilde{S}_X\left(-\tfrac{1}{\sqrt{T}}\right)
 \end{split}
 $$
 
-Par continuité de $\widetilde{S}_X\left( f\right) $ et par passage à la limite $T \longrightarrow + \infty$,  on en déduit
+Par continuité de S~X(f) et par passage à la limite T⟶+∞,  on en déduit
 
 $$
 I_{2}=  \Delta S_X\left( 0\right).
@@ -257,7 +257,7 @@ $$
 
 ```{prf:example} Le secteur
 
-Puisque $E[X(t)] =0$, il suffit de vérifier que $\Delta S_X\left( 0\right) = 0$, ce qui est immédiat. En effet, puisque $E[X(t)X(t-\tau)=\frac{A^2}{2} \cos \left( 2\pi f_{0} \tau \right)$, la densité spectrale de puissance de $X(t)$ est
+Puisque E[X(t)]=0, il suffit de vérifier que ΔSX(0)=0, ce qui est immédiat. En effet, puisque E[X(t)X(t−τ)=A22cos⁡(2πf0τ), la densité spectrale de puissance de X(t) est
 
 $$
 s_X(f)=\frac{A^2}{4}  \left[ \delta(f-  f_{0}) + \delta(f+  f_{0})  \right]
@@ -287,7 +287,7 @@ $$
 
 $$
 \begin{split}
-E[X(t)X(t-\tau)] & = \frac{E[A^2]}{4} E \left \{ [1+\cos(4 \pi f_0 t +2 \theta)] [1+\cos(4 \pi f_0 t-4 \pi f_0 \tau +2 \theta)] ]\right \} \\
+E[X(t)X(t-\tau)] & = \frac{E[A^2]}{4} E \left \{ [1+\cos(4 \pi f_0 t +2 \theta)] [1+\cos(4 \pi f_0 t-4 \pi f_0 \tau +2 \theta)] ]\right \} \
 &=  \frac{E[A^2]}{4} +  \frac{E[A^2]}{8} \cos(4 \pi f_0 \tau),   
 \end{split}
 $$
@@ -312,7 +312,7 @@ $$
  \Delta S_X\left( 0\right)-m^2 =  \frac{E[A^2]}{4} -\frac{m_A^2}{4}=\frac{\sigma_A^2}{4}
 $$ 
 
-qui est différent de $0$ lorsque $A$ est une variable aléatoire (non constante). **Ceci confirme que le carré du secteur est un signal non ergodique.**
+qui est différent de 0 lorsque A est une variable aléatoire (non constante). **Ceci confirme que le carré du secteur est un signal non ergodique.**
 ```
 
 ### Résultats intéressants

@@ -1,4 +1,4 @@
-# Traitements non-linéaires
+# <i class="fas fa-book fa-fw"></i> Traitements non-linéaires
 
 Les traitements à base de filtres ne sont pas les seuls types de traitements que l'on peut utiliser. Si l'aspect linéaire des traitements est très attractif du point de point de vue de la complexité, on doit dans certaines applications utiliser des traitements non linéaires. De plus, de nombreux systèmes comme en télécommunication ou en imagerie comme des systèmes dont la fonction de transfert est non linéaire.
 
